@@ -1,8 +1,8 @@
 <template>
-  <div>主页路由</div>
+  <div>文章路由入口</div>
 </template>
 
 <route lang="yaml">
 meta:
-  layout: home
+  layout: post
 </route>

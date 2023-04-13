@@ -1,11 +1,8 @@
 <template>
   <Layout>
-    <div class="divide-y divide-gray-200 dark:divide-gray-700">
-      <StarterHeader />
-
-      <slot>
-        <router-view />
-      </slot>
-    </div>
+    <div>主页布局</div>
+    <slot>
+      <router-view />
+    </slot>
   </Layout>
 </template>

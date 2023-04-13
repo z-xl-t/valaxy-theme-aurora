@@ -1,5 +1,8 @@
 <template>
   <Layout>
-    <StarterArticle />
+    <div>文章布局</div>
+    <slot>
+      <router-view />
+    </slot>
   </Layout>
 </template>
