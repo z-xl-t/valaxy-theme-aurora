@@ -1,0 +1,30 @@
+{
+  "name": "valaxy-theme-starter",
+  "version": "0.2.0",
+  "packageManager": "pnpm@7.5.0",
+  "author": {
+    "email": "me@yunyoujun.cn",
+    "name": "YunYouJun",
+    "url": "https://www.yunyoujun.cn"
+  },
+  "homepage": "https://starter.valaxy.site",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YunYouJun/valaxy-theme-starter"
+  },
+  "keywords": [
+    "valaxy",
+    "theme",
+    "starter",
+    "vue"
+  ],
+  "main": "client/index.ts",
+  "types": "types/index.d.ts",
+  "dependencies": {
+    "@iconify-json/ant-design": "^1.1.5",
+    "@iconify-json/simple-icons": "^1.1.48"
+  },
+  "devDependencies": {
+    "valaxy": "^0.14.25"
+  }
+}
