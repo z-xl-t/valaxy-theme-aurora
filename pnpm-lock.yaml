@@ -19,7 +19,7 @@ importers:
       valaxy:
         specifier: ^0.14.25
         version: 0.14.25(@types/markdown-it@12.2.3)(@unhead/vue@1.1.25)(postcss@8.4.21)(typescript@4.9.5)
-      valaxy-theme-starter:
+      valaxy-theme-aurora:
         specifier: workspace:*
         version: link:theme
       vue-tsc:
@@ -31,7 +31,7 @@ importers:
       valaxy:
         specifier: ^0.14.25
         version: 0.14.25(@types/markdown-it@12.2.3)(@unhead/vue@1.1.25)(postcss@8.4.21)(typescript@4.9.5)
-      valaxy-theme-starter:
+      valaxy-theme-aurora:
         specifier: workspace:*
         version: link:../theme
     devDependencies:
