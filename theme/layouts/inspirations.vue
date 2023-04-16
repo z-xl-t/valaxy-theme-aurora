@@ -1,5 +1,5 @@
 <template>
   <Layout>
-    <span>主页</span>
+    <span>灵感</span>
   </Layout>
 </template>

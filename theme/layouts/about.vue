@@ -1,5 +1,5 @@
 <template>
   <Layout>
-    <span>主页</span>
+    <span>关于</span>
   </Layout>
 </template>

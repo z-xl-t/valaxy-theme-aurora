@@ -7,6 +7,5 @@ import type { ThemeConfig } from 'valaxy-theme-aurora'
  */
 export default defineConfig<ThemeConfig>({
   theme: 'aurora',
-
   themeConfig: {},
 })

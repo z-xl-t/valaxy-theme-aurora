@@ -1,8 +1,8 @@
 <template>
-  <div>文章路由</div>
+  <div>灵感路由</div>
 </template>
 
 <route lang="yaml">
 meta:
-  layout: posts
+  layout: inspirations
 </route>

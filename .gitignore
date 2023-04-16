@@ -60,3 +60,5 @@ build/
 
 # plugins
 .VSCodeCounter
+
+.vscode

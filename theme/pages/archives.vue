@@ -1,8 +1,8 @@
 <template>
-  <div>文章路由</div>
+  <div>归档路由</div>
 </template>
 
 <route lang="yaml">
 meta:
-  layout: posts
+  layout: archives
 </route>

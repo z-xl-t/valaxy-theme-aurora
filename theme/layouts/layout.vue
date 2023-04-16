@@ -1,8 +1,10 @@
 <template>
-  <div>
-    <main>
-      <div>Layout 布局</div>
-      <slot />
-    </main>
-  </div>
+  <AuroraHeader />
+  <main>
+    <slot>
+      <route-view />
+    </slot>
+  </main>
+  <AuroraFooter />
+  <AuroraBackTop />
 </template>
