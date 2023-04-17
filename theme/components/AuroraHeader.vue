@@ -14,9 +14,11 @@ const menu = themeConfig.value.menu || []
       {{ themeConfig.subtitle }}
     </h2>
     <nav class="menu">
-      <a v-for="(item, index) in menu" :key="index" :href=" item?.link">
-        <i :class=" item?.icon" />
-        <span>{{ item?.text }}</span>
+      <a v-for="(item, index) in menu" :key="index" class="menu-item" :href=" item?.link">
+        <li>
+          <i :class=" item?.icon" />
+          <span>{{ item?.text }}</span>
+        </li>
       </a>
     </nav>
   </header>

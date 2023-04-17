@@ -4,5 +4,5 @@
 
 <route lang="yaml">
 meta:
-  layout: tags
+  layout: default
 </route>

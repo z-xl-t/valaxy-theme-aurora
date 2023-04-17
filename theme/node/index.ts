@@ -48,7 +48,7 @@ export const defaultThemeConfig: ThemeConfig = {
       text: '灵感',
       link: '/inspirations/',
       quote: '詠奏妖華，明鏡止水',
-      icon: 'icon-inspirations',
+      icon: 'icon-inspiration',
     }, {
       text: '友链',
       link: '/friends/',
@@ -66,5 +66,7 @@ export const defaultThemeConfig: ThemeConfig = {
     since: 2022,
     title: '椎咲良田',
     subtitle: '快走吧 趁风停止之前',
+    themeName: 'valaxy-theme-aurora',
+    themeAddress: 'https://github.com/zmxlt/valaxy-theme-aurora',
   },
 }

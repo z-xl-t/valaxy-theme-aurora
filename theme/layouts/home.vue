@@ -1,5 +1,5 @@
 <template>
   <Layout>
-    <span>主页</span>
+    <router-view />
   </Layout>
 </template>

@@ -1,0 +1,34 @@
+@use '../vars.scss' as *;
+@use '../animation.scss' as *;
+@use '../mixin.scss' as *;
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &>div {
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+  }
+
+  &>div:nth-child(1) {
+    text-align: right;
+  }
+
+  &>div:nth-child(2) {
+    text-align: left;
+  }
+
+  &>p {
+    a {
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: $link-color;
+      }
+    }
+  }
+
+}

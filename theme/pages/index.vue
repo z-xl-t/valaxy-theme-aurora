@@ -1,5 +1,8 @@
+<script lang="ts" setup>
+</script>
+
 <template>
-  <div>主页路由</div>
+  <AuroraHomePostList />
 </template>
 
 <route lang="yaml">

@@ -1,0 +1,134 @@
+@use './vars.scss' as *;
+@use './animation.scss' as *;
+
+// 基本布局
+@mixin pc-layout {
+  @media screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin sp-layout {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}
+
+
+// 鼠标样式 
+@mixin cursor($imgUrl) {
+  cursor: $imgUrl auto !important;
+}
+
+// 滚动条
+@mixin scrollBar {
+  ::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+    background-color: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    border-radius: 4px;
+    background-color: $purple-dim;
+    background-image: -webkit-linear-gradient(45deg,
+        rgba(255, 255, 255, 0.4) 25,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0.4) 75,
+        transparent 75%,
+        transparent);
+  }
+
+  ::-webkit-scrollbar-track {
+    background-color: $grey-dim;
+  }
+}
+
+// clip 条
+
+@mixin clip {
+  color: white;
+  text-transform: capitalize;
+  background-image: linear-gradient(to right, $text-clip-start 10%, $text-clip-center 40%, $text-clip-end 70%);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  animation: textclip 3s linear infinite;
+}
+
+// K卡片轮廓
+
+@mixin card {
+
+  border-radius: 3px;
+  background-color: $bg-white-deep;
+
+  @include pc-layout() {
+
+    box-shadow: $card-shadow-base;
+  }
+
+  @include sp-layout() {
+
+    box-shadow: $card-shadow-light;
+  }
+}
+
+@mixin card-lignt {
+
+  border-radius: 3px;
+  background-color: $bg-white-dim;
+  box-shadow: $card-shadow-light;
+  transition: $transition-base;
+
+  @include pc-layout() {
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: $card-shadow-light-hover;
+    }
+  }
+}
+
+@mixin card-page() {
+
+  border-radius: 3px;
+
+  @include pc-layout() {
+
+    background-color: $bg-white-dim;
+    box-shadow: $card-shadow-base;
+  }
+}
+
+// 绝对/固定 定位， 宽高占满父元素
+
+@mixin fillParent($typeof, $zIndex) {
+  position: $typeof;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: $zIndex;
+}
+
+// 居中 主轴水平
+@mixin flexCenter() {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// 居中 主轴竖直
+@mixin flexColumnCenter() {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -1,10 +1,13 @@
 <template>
-  <AuroraHeader />
-  <main>
-    <slot>
-      <route-view />
-    </slot>
-  </main>
-  <AuroraFooter />
-  <AuroraBackTop />
+  <div class="layout">
+    <AuroraHeader />
+    <main>
+      <div class="main-content">
+        <slot>
+          <router-view />
+        </slot>
+      </div>
+    </main>
+    <AuroraFooter />
+  </div>
 </template>

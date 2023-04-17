@@ -4,5 +4,5 @@
 
 <route lang="yaml">
 meta:
-  layout: books
+  layout: default
 </route>
