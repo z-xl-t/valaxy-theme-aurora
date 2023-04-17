@@ -1,44 +1,38 @@
 ---
-title: 关于
+date: 2019-12-06 10:10:10
+type: about
+comments: true
+info:
+  avatar: /images/avatar.jpg
+  name: 椎咲良田
+  sign: 快走吧，趁风停止之前
+  graduation: '本科'
+  profession: '家里蹲大学'
+contact:
+  - icon: /images/avatar.jpg
+    link: https://github.com/sanshiliuxiao
+  - icon: https://i.loli.net/2019/01/25/5c4b2a7558ad7.png
+    link: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=xrWnqLWur6qvs76vp6mGoKm_q6evquilqas
+introduction:
+  - name: "主题来源"
+    content:
+      - "此主题为蝉时雨博客主题的 Hexo 移植版，感谢蝉时雨大佬开源的主题代码。"
+      - "如果你想使用原主题，请访问 <a href='https://github.com/chanshiyucx/aurora'>aurora</a>"
+      - "如果你想使用 hexo 版本主题， 请访问 <a href='https://github.com/zmxlt/hexo-theme-aurora'>hexo-theme-aurora</a>"
+      - "如果你想使用 valaxy 版本主题， 请访问 <a href='https://github.com/zmxlt/valaxy-theme-aurora'>valaxy-theme-aurora</a>"
+      - "如果有什么疑问，请在该页面下面留言，或者向上面仓库提交 Issues"
+  - name: "博客申明"
+    content:
+      - "博客中需要标注的链接、说明，无特殊情况均会进行说明。"
+      - "博客遵循：<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh'>署名-非商业性使用-相同方式共享 4.0 国际</a>"
+  - name: "时间轴线"
+    content:
+      - "2024-04-10: 移植主题至 valaxy "
+      - "2019-12-06：跟随原主题步伐，继续重构，更完美の还原！"
+      - "2019-09-15：增添 书籍页 和 灵感页"
+      - "2019-04-20：优化移植主题，添加 pjax 等功能"
+      - "2019-02-24：移植 aurora 主题"
+      - "2018-10-29：魔改 Next 主题"
+      - "2019-07-13：购入域名 sanshiliuxiao.top"
+      - "2018-06-01：小站成立，主题 Next"
 ---
-
-Hello，我是[云游君](https://github.com/YunYouJun)，我正在开发 Valaxy 以重构我的[博客](https://www.yunyoujun.cn)。
-
-同时它也会是一个功能强大、启动迅速、使用便捷的静态博客框架。
-
-More info see [Valaxy](https://github.com/YunYouJun/valaxy).
-
----
-
-[**「Steins;Gate」**](https://zh.wikipedia.org/wiki/%E5%91%BD%E9%81%8B%E7%9F%B3%E4%B9%8B%E9%96%80)的世界性变动率是：<span font="mono">1.048596</span>。
-
-Valaxy 的默认启动端口号截取自其中小数点后第二位开始的 <span font="mono">4859</span>。
-
-**「無限遠点のアークライト」**直译为**无限远点的弧光灯**，在翻译时[维基百科](https://zh.wikipedia.org/wiki/%E5%91%BD%E9%81%8B%E7%9F%B3%E4%B9%8B%E9%96%80)上显示为 **「无限远点的牵牛星」**，而[科学 ADV 中文百科](https://sci-adv.cc/wiki/%E5%B9%BF%E6%92%AD%E5%89%A7:%E6%97%A0%E9%99%90%E8%BF%9C%E7%82%B9%E7%9A%84%E5%BC%A7%E5%85%89%E7%81%AF)则译为 **「无限远点的织女星」**。
-
-命运石之门 0 中，真有理将凶真打回 **「命运石之门」** 世界线的行动称之为 **「织女星计划」**。
-而 25 年后，凶真寻找真有理的计划则为 **「牵牛星计划」**。
-
-因此我决定将 Valaxy 开发计划称之为 **「银河计划 - Galaxy Plan」**。
-
----
-
-## 特性
-
-- 现代博客框架，一些新的尝试
-- Vue & Vite 热加载开发体验
-- 动态预览
-- 一键使用
-- ...
-
-## [Why Valaxy?](https://valaxy.site/guide/why)
-
-## [Sponsors](https://sponsors.yunyoujun.cn)
-
-❤️ 感谢以下赞助者们的支持！
-
-<p align="center">
-  <a href="https://sponsors.yunyoujun.cn">
-    <img src='https://sponsors.yunyoujun.cn/sponsors.svg'/>
-  </a>
-</p>

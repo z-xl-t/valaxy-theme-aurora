@@ -8,7 +8,6 @@ defineProps<{
 
 <template>
   <article>
-    <StarterDate :date="post.date" />
     <div class="space-y-5 xl:col-span-3">
       <div class="space-y-6">
         <h2 class="text-2xl leading-8 font-bold tracking-tight">

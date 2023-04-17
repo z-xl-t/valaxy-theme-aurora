@@ -10,3 +10,9 @@ useHead({
   ],
 })
 </script>
+
+<template>
+  <div style="display: none">
+    Valaxy-Theme-Aurora
+  </div>
+</template>

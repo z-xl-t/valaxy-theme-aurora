@@ -8,7 +8,7 @@ const currentYear = new Date().getFullYear()
 <template>
   <footer>
     <div>
-      <P>
+      <p>
         <i class="icon-copyright" />
         <span>{{ themeConfig.footer.since }}</span>
         <span>-</span>
