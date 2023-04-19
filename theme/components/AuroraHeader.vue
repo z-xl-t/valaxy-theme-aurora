@@ -3,7 +3,6 @@ import { useThemeConfig } from '../composables'
 
 const themeConfig = useThemeConfig()
 const menu = themeConfig.value.menu || []
-
 const mobileBgImage = themeConfig.value.mobileBgImage || ''
 </script>
 
