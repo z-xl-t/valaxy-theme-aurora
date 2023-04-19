@@ -38,7 +38,7 @@ const frontmatter = useFrontmatter()
       </div>
       <ul v-if="frontmatter.introduction" class="introduction">
         <li v-for="(intro, i) in frontmatter.introduction" :key="i" class="intro markdown">
-          <span class="name-warpper">
+          <span class="name-wrapper">
             <span class="name">{{ intro.name }}</span>
           </span>
           <div v-for="(c, j) in intro.content" :key="j" class="content" v-html="c" />

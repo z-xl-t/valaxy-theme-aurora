@@ -3,14 +3,14 @@ date: 2019-12-06 10:10:10
 type: about
 comments: true
 info:
-  avatar: /images/avatar.jpg
+  avatar: /avatar.jpg
   name: 椎咲良田
   sign: 快走吧，趁风停止之前
   graduation: '本科'
   profession: '家里蹲大学'
 contact:
-  - icon: /images/avatar.jpg
-    link: https://github.com/sanshiliuxiao
+  - icon: /avatar.jpg
+    link: https://github.com/zmxlt
   - icon: https://i.loli.net/2019/01/25/5c4b2a7558ad7.png
     link: http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=xrWnqLWur6qvs76vp6mGoKm_q6evquilqas
 introduction:
