@@ -2,7 +2,6 @@
 import { useFrontmatter } from 'valaxy'
 
 const frontmatter = useFrontmatter()
-const quote = '123'
 </script>
 
 <template>
@@ -37,14 +36,14 @@ const quote = '123'
           <img :src="con.icon" alt="icon" class="icon">
         </a>
       </div>
-      <ui v-if="frontmatter.introduction" class="introduction">
+      <ul v-if="frontmatter.introduction" class="introduction">
         <li v-for="(intro, i) in frontmatter.introduction" :key="i" class="intro markdown">
           <span class="name-warpper">
             <span class="name">{{ intro.name }}</span>
           </span>
           <div v-for="(c, j) in intro.content" :key="j" class="content" v-html="c" />
         </li>
-      </ui>
+      </ul>
     </div>
   </Layout>
 </template>

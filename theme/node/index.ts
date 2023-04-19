@@ -11,10 +11,10 @@ export const defaultThemeConfig: ThemeConfig = {
   avatar: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/avatar.jpg',
   favicon: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/favicon.jpg',
   domain: 'zmxlt.top',
-  pcImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/pc.png',
-  mobileImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
-  postImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage .png',
-  loadingImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/loading.gif',
+  defaultBgColor: '#cfd0f8',
+  pcBgImage: '/pc.png',
+  mobileBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
+  postCoverImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage .png',
   menu: [
     {
       text: '首页',

@@ -14,12 +14,12 @@ export interface ThemeConfig {
    */
   menu: Partial<Menu[]>
   /**
-   * 背景图片(电脑页面/手机页面) 默认文章封面, 加载图片
+   * 默认背景颜色，背景图片(电脑页面/手机页面) 默认文章封面
    */
-  pcImage: string
-  mobileImage: string
-  postImage: string
-  loadingImage: string
+  defaultBgColor: string
+  pcBgImage: string
+  mobileBgImage: string
+  postCoverImage: string
   footer: Partial<{
     since: number
     /**

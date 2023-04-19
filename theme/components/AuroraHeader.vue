@@ -3,10 +3,15 @@ import { useThemeConfig } from '../composables'
 
 const themeConfig = useThemeConfig()
 const menu = themeConfig.value.menu || []
+
+const mobileBgImage = themeConfig.value.mobileBgImage || ''
 </script>
 
 <template>
   <header>
+    <div class="mobile-bg">
+      <img :src="mobileBgImage" alt="mobile-bg">
+    </div>
     <h1 class="title">
       {{ themeConfig.title }}
     </h1>

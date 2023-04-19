@@ -133,4 +133,34 @@ body,
     min-height: 80px;
   }
 
+  .bg {
+    @include fillParent(fixed, $zIndex-bottom);
+    width: 100%;
+    height: 100%;
+
+    &::after {
+      content: '';
+      @include fillParent(absolute, $zIndex-1);
+      background-color: rgba(255, 255, 255, 0.65);
+    }
+
+    .pc-static-bg {
+      @include fillParent(fixed, $zIndex-bottom);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+      @include pc-layout() {}
+
+      @include sp-layout() {
+        display: none;
+      }
+    }
+  }
 }
