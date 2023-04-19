@@ -2,6 +2,8 @@
 @use './animation.scss' as *;
 @use './mixin.scss' as *;
 
+// reset
+
 * {
   margin: 0;
   padding: 0;
@@ -80,6 +82,7 @@ button {
   border-radius: 0;
 }
 
+
 html,
 body,
 #app,
@@ -93,6 +96,7 @@ body,
   }
 }
 
+// layout scss
 .layout {
   display: flex;
   flex-direction: column;
@@ -134,6 +138,14 @@ body,
   }
 
   .btt-wrapper {
+    &.hidden {
+      transform: translateY(-100%)
+    }
+
+    &.show {
+      transform: translateY(0)
+    }
+
     position: fixed;
     top: 0;
     right: 20px;
@@ -157,15 +169,6 @@ body,
       animation: float 3s linear infinite;
     }
   }
-
-  .btt-wrapper.hidden {
-    transform: translateY(-100%)
-  }
-
-  .btt-wrapper.show {
-    transform: translateY(0)
-  }
-
 
   .bg {
     @include fillParent(fixed, $zIndex-bottom);

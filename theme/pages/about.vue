@@ -1,5 +1,9 @@
+import AuroraAbout from 'components/AuroraAbout.vue';
+
 <template>
-  <div>关于路由</div>
+  <div class="about">
+    <AuroraAbout />
+  </div>
 </template>
 
 <route lang="yaml">

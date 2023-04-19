@@ -1,0 +1,200 @@
+@use './vars.scss' as *;
+@use './animation.scss' as *;
+@use './mixin.scss' as *;
+
+.home {
+  .post-list {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    @include pc-layout() {
+      justify-content: space-between;
+    }
+
+    @include sp-layout() {
+      justify-content: space-around;
+    }
+
+    article {
+      @include card-light();
+      overflow: hidden;
+      position: relative;
+
+      @include pc-layout() {
+        margin-bottom: 15px;
+        width: 49.2%;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -100%;
+          width: 150px;
+          height: 100%;
+          transform: skewX(-30deg);
+          transition: left 1s ease 0s;
+          z-index: $zIndex-1;
+          background: linear-gradient(to right,
+              rgba(255, 255, 255, 0) 0,
+              rgba(255, 255, 255, 0.5) 50%,
+              rgba(255, 255, 255, 0) 100%);
+        }
+
+        &:hover {
+          transform: translateY(-6px);
+          box-shadow: $card-shadow-hover;
+
+          &::before {
+            left: 150%;
+          }
+        }
+      }
+
+      @include sp-layout() {
+        width: 94%;
+        margin: 0 3% 4%;
+      }
+
+      .post-overview {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .post-header {
+          position: relative;
+          overflow: hidden;
+          min-height: 50px;
+
+          .post-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .post-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 0 12px;
+            height: 50px;
+            background-color: $bg-white-dim;
+            box-shadow: 0 -1px 2px $bg-dark;
+
+            @include sp-layout() {
+              padding: 0 6px;
+            }
+
+            .title {
+              font-size: $font-size-larger;
+              font-weight: $font-weight-normal;
+              @include clip()
+            }
+          }
+        }
+
+        .post-description {
+          padding: $card-padding;
+          text-align: justify;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          margin: 0;
+          font-size: $font-size-base;
+          text-overflow: ellipsis;
+          overflow: hidden;
+
+          @include pc-layout() {
+            -webkit-line-clamp: 3;
+
+          }
+
+          @include sp-layout() {
+            -webkit-line-clamp: 4;
+          }
+        }
+
+        .post-meta-wrapper {
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -20px;
+            right: -20px;
+            height: 1px;
+            background: $bg-dark-line;
+          }
+
+          margin: 0 14px;
+          position: relative;
+          z-index: $zIndex-2;
+          max-width: 100%;
+          height: 50px;
+
+          @include sp-layout() {
+            padding: 0 6px;
+          }
+
+          .post-meta {
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            overflow: auto;
+            display: flex;
+            align-items: center;
+
+
+
+            &>span {
+              display: flex;
+              align-items: center;
+              justify-content: left;
+              margin-right: 12px;
+              word-break: keep-all;
+              flex-shrink: 0;
+
+              span {
+                padding-right: 6px;
+                word-break: keep-all;
+
+                &:last-child {
+                  padding-right: 0px;
+                }
+              }
+            }
+
+            .icon-calendar,
+            .icon-fire,
+            .icon-tag,
+            .icon-bookmark-empty {
+              margin-right: 4px;
+            }
+
+            .icon-calendar .icon-fire {
+              margin-top: -2px;
+            }
+
+            @include sp-layout() {
+              &>span {
+
+                margin-right: 6px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+}

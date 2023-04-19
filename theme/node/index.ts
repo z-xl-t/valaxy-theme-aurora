@@ -14,7 +14,7 @@ export const defaultThemeConfig: ThemeConfig = {
   defaultBgColor: '#cfd0f8',
   pcBgImage: '/pc.png',
   mobileBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
-  postCoverImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage .png',
+  defaultPostCoverImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage%20.png',
   menu: [
     {
       text: '首页',

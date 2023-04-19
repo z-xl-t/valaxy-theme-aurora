@@ -1,30 +1,32 @@
 <script lang="ts" setup>
 import type { Post } from 'valaxy'
 
-defineProps<{
+const props = withDefaults(defineProps<{
   post: Post
-}>()
+}>(), {})
+
+const title = props.post.title
+const imageUrl = props.post.imageUrl || ''
+const description = props.post.description || ''
+const date = props.post.date || ''
+const tags = props.post.tags || [] as string[]
+const categories = props.post.categories || [] as string[]
 </script>
 
 <template>
   <article>
-    <div class="space-y-5 xl:col-span-3">
-      <div class="space-y-6">
-        <h2 class="text-2xl leading-8 font-bold tracking-tight">
-          <router-link class="st-text" :to="post.path || ''">
-            {{ post.title }}
-          </router-link>
-        </h2>
-        <div
-          v-if="post.excerpt"
-          class="prose max-w-none text-gray-500"
-          v-html="post.excerpt"
-        />
+    <div class="post-overview">
+      <div class="post-header">
+        <PostImage :image-url="imageUrl" />
+        <PostTitle :title="title" level="h1" />
       </div>
-      <div>
-        <router-link class="link" aria-label="read more" :to="post.path || ''">
-          Read more →
-        </router-link>
+      <PostDescription :description="description" />
+      <div class="post-meta-wrapper">
+        <div class="post-meta">
+          <PostTimeAgo :date="date" />
+          <PostTags :tags="tags" />
+          <PostCategories :categories="categories" />
+        </div>
       </div>
     </div>
   </article>

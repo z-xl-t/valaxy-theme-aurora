@@ -19,7 +19,8 @@ export interface ThemeConfig {
   defaultBgColor: string
   pcBgImage: string
   mobileBgImage: string
-  postCoverImage: string
+  defaultPostCoverImage: string
+  
   footer: Partial<{
     since: number
     /**

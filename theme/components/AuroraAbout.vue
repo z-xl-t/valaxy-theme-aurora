@@ -1,13 +1,16 @@
 <script lang="ts" setup>
-import { useFrontmatter } from 'valaxy'
+import { useFrontmatter, useThemeConfig } from 'valaxy'
 
 const frontmatter = useFrontmatter()
+const themeConfig = useThemeConfig()
+
+const quote = themeConfig.value.menu.find((m: { link: string }) => m.link === '/about/').quote
 </script>
 
 <template>
   <Layout>
     <div class="about">
-      <AuroraQuote quote="测试" />
+      <AuroraQuote :quote="quote" />
       <div v-if="frontmatter.info" class="info-header">
         <div class="avatar">
           <img :src="frontmatter.info.avatar" alt="avatar">

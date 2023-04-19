@@ -50,6 +50,9 @@ importers:
       '@iconify-json/simple-icons':
         specifier: ^1.1.48
         version: 1.1.48
+      dayjs:
+        specifier: ^1.11.7
+        version: 1.11.7
     devDependencies:
       valaxy:
         specifier: ^0.14.25
