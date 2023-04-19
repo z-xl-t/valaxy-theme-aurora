@@ -1,21 +1,21 @@
 {
   "name": "valaxy-theme-aurora",
-  "version": "0.2.0",
+  "version": "0.2.5",
   "packageManager": "pnpm@7.5.0",
   "author": {
-    "email": "me@yunyoujun.cn",
-    "name": "YunYouJun",
-    "url": "https://www.yunyoujun.cn"
+    "email": "sanshiliuxiao@foxmail.com",
+    "name": "zmxlt",
+    "url": "https://zxlt.top"
   },
-  "homepage": "https://starter.valaxy.site",
+  "homepage": "https://aurora.zxlt.top",
   "repository": {
     "type": "git",
-    "url": "https://github.com/YunYouJun/valaxy-theme-starter"
+    "url": "https://github.com/zmxlt/valaxy-theme-aurora"
   },
   "keywords": [
     "valaxy",
     "theme",
-    "starter",
+    "aurora",
     "vue"
   ],
   "main": "client/index.ts",

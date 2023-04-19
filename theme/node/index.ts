@@ -10,7 +10,7 @@ export const defaultThemeConfig: ThemeConfig = {
   description: '世界并不美丽，却也因此而美丽',
   avatar: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/avatar.jpg',
   favicon: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/favicon.jpg',
-  domain: 'zmxlt.top',
+  domain: 'aurora.zmxlt.top',
   defaultBgColor: '#cfd0f8',
   pcBgImage: '/pc.png',
   mobileBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
