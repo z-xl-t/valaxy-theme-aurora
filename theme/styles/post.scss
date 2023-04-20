@@ -1,0 +1,100 @@
+@use './vars.scss' as *;
+@use './animation.scss' as *;
+@use './mixin.scss' as *;
+
+.post {
+  @include card();
+  width: 99%;
+  margin: 0 auto;
+  position: relative;
+  overflow: unset;
+
+  .post-overview {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .post-header {
+      position: relative;
+      overflow: hidden;
+      min-height: 50px;
+
+      .post-image {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+
+    }
+
+    .post-meta-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      min-height: 80px;
+      padding: 12px 14px;
+      background-color: $bg-white-dim;
+      box-shadow: 0 -1px 2px $bg-dark;
+
+      @include sp-layout() {
+        padding: 0 6px;
+      }
+
+      .title {
+        @include clip();
+
+        font-size: $font-size-larger;
+        font-weight: $font-weight-normal;
+      }
+
+      .post-meta {
+        display: flex;
+        align-items: center;
+        @include clip();
+
+        &>span {
+          display: flex;
+          align-items: center;
+          justify-content: left;
+          margin-right: 12px;
+          word-break: keep-all;
+          flex-shrink: 0;
+
+          span {
+            padding-right: 6px;
+            word-break: keep-all;
+
+            &:last-child {
+              padding-right: 0px;
+            }
+          }
+        }
+
+        .icon-calendar,
+        .icon-fire,
+        .icon-tag,
+        .icon-bookmark-empty {
+          margin-right: 4px;
+        }
+
+        .icon-calendar .icon-fire {
+          margin-top: -2px;
+        }
+
+        @include sp-layout() {
+          &>span {
+            margin-right: 6px !important;
+          }
+        }
+      }
+    }
+  }
+}

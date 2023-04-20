@@ -110,16 +110,6 @@
 
     img {
       border-radius: 50%;
-
-      @include pc-layout() {
-        width: 30px;
-        height: 30px;
-      }
-
-      @include sp-layout() {
-        width: 24px;
-        height: 24px;
-      }
     }
   }
 

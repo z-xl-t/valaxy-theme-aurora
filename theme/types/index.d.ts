@@ -32,6 +32,7 @@ export interface ThemeConfig {
     themeName: string
     themeAddress: string
   }>
+  themeColors: String[]
 }
 
 export interface Menu {

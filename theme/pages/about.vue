@@ -1,7 +1,5 @@
 <template>
-  <div class="about">
-    <AuroraAbout />
-  </div>
+  <AuroraAbout />
 </template>
 
 <route lang="yaml">
