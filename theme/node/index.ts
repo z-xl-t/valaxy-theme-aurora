@@ -69,4 +69,18 @@ export const defaultThemeConfig: ThemeConfig = {
     themeName: 'valaxy-theme-aurora',
     themeAddress: 'https://github.com/zmxlt/valaxy-theme-aurora',
   },
+  themeColors: [
+    '#B28FCE', // 薄
+    '#86C166', // 苗
+    '#F596AA', // 桃
+    '#F19483', // 曙
+    '#F9BF45', // 玉子
+    '#FAD689', // 浅黄
+    '#E79460', // 洗柿
+    '#2EA9DF', // 露草
+    '#FB966E', // 洗朱
+    '#BC9F77', // 白茶
+    '#867835', // 黄海松茶
+    '#B9887D', // 水がき
+  ],
 }

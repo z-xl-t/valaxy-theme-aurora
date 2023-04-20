@@ -4,6 +4,13 @@ import { useFrontmatter, useThemeConfig } from 'valaxy'
 const frontmatter = useFrontmatter()
 const themeConfig = useThemeConfig()
 const quote = themeConfig.value.menu.find((m: { link: string }) => m.link === '/about/').quote
+const themeColors = themeConfig.value.themeColors
+const themeColorsLength = themeColors.length
+
+function getRandomColor() {
+  const index = Math.floor(Math.random() * (themeColorsLength) + 1)
+  return themeColors[index]
+}
 </script>
 
 <template>
@@ -40,7 +47,7 @@ const quote = themeConfig.value.menu.find((m: { link: string }) => m.link === '/
     </div>
 
     <ul v-if="frontmatter.introduction" class="introduction">
-      <li v-for="(intro, i) in frontmatter.introduction" :key="i" class="intro markdown">
+      <li v-for="(intro, i) in frontmatter.introduction" :key="i" :style="{ 'color': getRandomColor(), 'border-top': `2px solid ${getRandomColor()}` }" class="intro markdown">
         <span class="name-wrapper">
           <span class="name">{{ intro.name }}</span>
         </span>
