@@ -1,14 +1,9 @@
-<script lang="ts" setup>
-</script>
-
 <template>
   <div class="layout">
     <AuroraHeader />
     <main>
       <div class="main-content">
-        <slot>
-          <router-view />
-        </slot>
+        <slot name="main-content" />
       </div>
     </main>
     <AuroraFooter />

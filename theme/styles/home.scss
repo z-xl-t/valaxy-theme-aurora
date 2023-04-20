@@ -153,8 +153,6 @@
             display: flex;
             align-items: center;
 
-
-
             &>span {
               display: flex;
               align-items: center;
@@ -192,6 +190,10 @@
             }
           }
         }
+      }
+
+      .post-link {
+        @include fillParent(absolute, $zIndex-1)
       }
     }
   }

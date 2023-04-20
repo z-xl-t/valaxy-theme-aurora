@@ -111,7 +111,7 @@ body,
     min-height: 200px;
   }
 
-  main {
+  &>main {
     flex: 1;
     margin: 0 auto;
     user-select: text;

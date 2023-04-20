@@ -1,9 +1,6 @@
 import AuroraAbout from 'components/AuroraAbout.vue';
-
 <template>
-  <div class="about">
-    <AuroraAbout />
-  </div>
+  <AuroraAbout />
 </template>
 
 <route lang="yaml">
