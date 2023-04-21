@@ -1,21 +1,14 @@
 <script lang="ts" setup>
-import { computed } from '@vue/reactivity'
 import { useFrontmatter, useThemeConfig } from 'valaxy'
+import { getRandomColorArr } from '../utils'
 
 const frontmatter = useFrontmatter()
 const themeConfig = useThemeConfig()
 const quote = themeConfig.value.menu.find((m: { link: string }) => m.link === '/about/').quote
 const themeColors = themeConfig.value.themeColors
-const themeColorsLength = themeColors.length
+const introductionLength = frontmatter.value.introduction.length
 
-const getRandomColors = computed(() => {
-  const arr = []
-  for (let i = 0; i < themeColorsLength; ++i) {
-    const index = Math.floor(Math.random() * (themeColorsLength) + 1)
-    arr.push(themeColors[index])
-  }
-  return arr
-})
+const getRandomColors = getRandomColorArr(themeColors, introductionLength)
 </script>
 
 <template>

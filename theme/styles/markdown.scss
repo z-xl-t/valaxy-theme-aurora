@@ -2,7 +2,8 @@
 @use './animation.scss' as *;
 @use './mixin.scss' as *;
 
-.markdown-body {
+.markdown-body,
+.markdown {
   text-align: justify;
   font-size: $font-size-normal;
   line-height: $line-height-block;

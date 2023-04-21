@@ -1,0 +1,95 @@
+@use './vars.scss' as *;
+@use './animation.scss' as *;
+@use './mixin.scss' as *;
+
+.inspirations {
+  flex: 1;
+  @include card-page();
+  padding: 16px;
+
+  li {
+    margin-bottom: 16px;
+    padding: $card-padding-large;
+    text-align: justify;
+    overflow: unset;
+    border-radius: 3px;
+    background-color: $bg-white-dim;
+    box-shadow: $card-shadow-light;
+    transition: $transition-base;
+
+    .time-wrapper {
+
+      display: inline-block;
+      position: relative;
+      left: -32px;
+      margin-bottom: 16px;
+      padding: 0 14px 0 32px;
+      height: 32px;
+      line-height: 32px;
+      border-radius: 0 3px 3px 0;
+      background-color: currentColor;
+
+      &:after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 0;
+        height: 0;
+        background-color: transparent;
+        border-style: solid;
+        border-width: 0 16px 16px 0;
+        border-color: transparent;
+        border-right-color: currentColor;
+        -webkit-filter: brightness(120%);
+        filter: brightness(120%);
+
+      }
+
+      .time {
+        color: #fff;
+      }
+    }
+
+    .moment {
+      color: $text-color;
+    }
+
+    .img-box {
+
+      text-align: center;
+      color: $text-color;
+
+      .desc {
+        margin-top: 10px;
+      }
+    }
+
+    img {
+      margin-bottom: 25px;
+      margin-bottom: 0;
+      border-radius: 3px;
+      box-shadow: $img-shadow;
+      border: 6px solid transparent;
+      transition: all 0.3s ease-out;
+      user-select: none;
+
+      &:hover {
+        border-color: $purple-dark;
+      }
+
+      span {
+        color: $text-color;
+        display: block;
+        padding-top: 10px;
+        font-style: italic;
+
+      }
+    }
+
+    .medium-zoom-overlay,
+    .medium-zoom-image--opened {
+      z-index: 999;
+    }
+  }
+}

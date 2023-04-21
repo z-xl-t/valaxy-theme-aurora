@@ -1,7 +1,6 @@
 ---
-date: 2019-12-06 10:10:10
-type: about
-comments: true
+title: 关于
+layout: about
 info:
   avatar: /avatar.jpg
   name: 椎咲良田

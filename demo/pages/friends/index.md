@@ -1,8 +1,7 @@
 ---
-title: 我的小伙伴们
-keywords: 链接
+title: 友链
+layout: friends
 description: 云游的小伙伴们
-layout: default
 links:
   - name: 蝉時雨
     siteUrl: https://chanshiyu.com
@@ -14,6 +13,6 @@ links:
     avatar: https://avatars2.githubusercontent.com/u/22363274?s=460&amp;v=4
 
 # 支持使用 json 数据链接
-# links: https://xxx.com/links.json
+# links: https://domain/links.json
 random: true
 ---

@@ -30,10 +30,3 @@ useMediumZoom()
     <slot ref="content" @vnode-updated="updateDom" />
   </article>
 </template>
-
-<style>
-.medium-zoom-overlay,
-.medium-zoom-image--opened {
-  z-index: 999;
-}
-</style>

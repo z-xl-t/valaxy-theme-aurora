@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import { useThemeConfig } from 'valaxy'
+import { useFrontmatter, useThemeConfig } from 'valaxy'
 import { useFetchData } from '../composables'
 import { ImgErrorHander } from '../utils'
-import AuroraQuote from './AuroraQuote.vue'
 
 interface LinkType {
   name: string
@@ -11,17 +10,13 @@ interface LinkType {
   avatar: string
 }
 
-const props = defineProps<{
-  links: string | LinkType[]
-  random: boolean
-}>()
-
 const themeConfig = useThemeConfig()
 const defaultAvatar = themeConfig.value.defaultFriendAvatarImage || ''
 const defaultBg = themeConfig.value.defaultFriendBgImage || ''
 const quote = themeConfig.value.menu.find((m: { link: string }) => m.link.includes('friends')).quote || ''
 
-const data = typeof (props.links) === 'string' ? useFetchData<LinkType>(props.links) : props.links
+const frontmatter = useFrontmatter()
+const data = typeof (frontmatter.value.links) === 'string' ? useFetchData<LinkType>(frontmatter.value.links) : frontmatter.value.links
 
 function onImgError(e: Event, defaultImage: string) {
   ImgErrorHander(e, defaultImage)
