@@ -6,4 +6,8 @@ export default defineSiteConfig({
   pageSize: 10,
   title: 'Aurora Blog',
   favicon: '/favicon.jpg',
+  mediumZoom: {
+    enable: true,
+    selector: '.markdown-body img',
+  },
 })

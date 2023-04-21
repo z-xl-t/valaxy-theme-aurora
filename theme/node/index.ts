@@ -15,6 +15,8 @@ export const defaultThemeConfig: ThemeConfig = {
   pcBgImage: '/pc.png',
   mobileBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
   defaultPostCoverImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage%20.png',
+  defaultFriendAvatarImage: '/pc.png',
+  defaultFriendBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
   menu: [
     {
       text: '首页',
