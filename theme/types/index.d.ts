@@ -44,4 +44,40 @@ export interface Menu {
   icon: string
 }
 
+
+/**
+ * friend link Type
+ */
+
+export interface firendType {
+  name: string
+  siteUrl: string
+  siteImg: string
+  avatar: string
+} 
+
+/**
+ * inspiration Type
+ */
+export interface inspirationType {
+  time: string
+  moment: string
+  imgUrl: string
+  imgDesc: string
+}
+
+/**
+ * book type
+ */
+
+export interface bookType {
+  name: string
+  cover: string
+  author: string
+  source: string
+  publicationTime: string
+  description: string
+  recommendIndex: numb1
+}
+
 export type ThemeUserConfig = Partial<ThemeConfig>

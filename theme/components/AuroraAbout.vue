@@ -1,14 +1,17 @@
 <script lang="ts" setup>
+import { useRoute } from 'vue-router'
 import { useFrontmatter, useThemeConfig } from 'valaxy'
-import { getRandomColorArr } from '../utils'
+import { getMenuQuote, getRandomColorArr } from '../utils'
 
 const frontmatter = useFrontmatter()
 const themeConfig = useThemeConfig()
-const quote = themeConfig.value.menu.find((m: { link: string }) => m.link === '/about/').quote
 const themeColors = themeConfig.value.themeColors
 const introductionLength = frontmatter.value.introduction.length
 
 const getRandomColors = getRandomColorArr(themeColors, introductionLength)
+
+const pathName = useRoute().name
+const quote = getMenuQuote(themeConfig.value.menu, pathName)
 </script>
 
 <template>

@@ -1,26 +1,19 @@
 <script setup lang="ts">
 import { useFrontmatter, useThemeConfig } from 'valaxy'
+import { useRoute } from 'vue-router'
 import { useFetchData } from '../composables'
-import { ImgErrorHander } from '../utils'
-
-interface LinkType {
-  name: string
-  siteUrl: string
-  siteImg: string
-  avatar: string
-}
+import { getMenuQuote, onImgError } from '../utils'
+import type { firendType } from '../types'
 
 const themeConfig = useThemeConfig()
 const defaultAvatar = themeConfig.value.defaultFriendAvatarImage || ''
 const defaultBg = themeConfig.value.defaultFriendBgImage || ''
-const quote = themeConfig.value.menu.find((m: { link: string }) => m.link.includes('friends')).quote || ''
 
 const frontmatter = useFrontmatter()
-const data = typeof (frontmatter.value.links) === 'string' ? useFetchData<LinkType>(frontmatter.value.links) : frontmatter.value.links
+const data = typeof (frontmatter.value.links) === 'string' ? useFetchData<firendType>(frontmatter.value.links) : frontmatter.value.links as firendType[]
 
-function onImgError(e: Event, defaultImage: string) {
-  ImgErrorHander(e, defaultImage)
-}
+const pathName = useRoute().name
+const quote = getMenuQuote(themeConfig.value.menu, pathName)
 </script>
 
 <template>

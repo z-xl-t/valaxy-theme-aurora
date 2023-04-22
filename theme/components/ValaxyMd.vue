@@ -5,7 +5,7 @@ import { inject, onMounted, ref } from 'vue'
 import { useCopyCode, useMediumZoom, wrapTable } from 'valaxy'
 import type { Post } from 'valaxy'
 
-const props = defineProps<{
+defineProps<{
   frontmatter: Post
   excerpt?: string
 }>()

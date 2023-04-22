@@ -1,25 +1,22 @@
 <script setup lang="ts">
 import { useFrontmatter, useMediumZoom, useThemeConfig } from 'valaxy'
+import { useRoute } from 'vue-router'
 import { useFetchData } from '../composables'
-import { getRandomColorArr } from '../utils'
-
-interface InspirationType {
-  time: string
-  moment: string
-  imgUrl: string
-  imgDesc: string
-}
+import { getMenuQuote, getRandomColorArr } from '../utils'
+import type { inspirationType } from '../types'
 
 const themeConfig = useThemeConfig()
-const quote = themeConfig.value.menu.find((m: { link: string }) => m.link.includes('inspirations')).quote || ''
 
 useMediumZoom()
 const frontmatter = useFrontmatter()
-const data = typeof (frontmatter.value.inspirations) === 'string' ? useFetchData<InspirationType>(frontmatter.value.inspirations) : frontmatter.value.inspirations
+const data = typeof (frontmatter.value.inspirations) === 'string' ? useFetchData<inspirationType>(frontmatter.value.inspirations) : frontmatter.value.inspirations as inspirationType[]
 
 const themeColors = themeConfig.value.themeColors
 const introductionLength = data.length
 const getRandomColors = getRandomColorArr(themeColors, introductionLength)
+
+const pathName = useRoute().name
+const quote = getMenuQuote(themeConfig.value.menu, pathName)
 </script>
 
 <template>
