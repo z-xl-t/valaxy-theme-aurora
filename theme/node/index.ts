@@ -5,9 +5,8 @@ import type { ThemeConfig } from '../types'
  */
 export const defaultThemeConfig: ThemeConfig = {
   title: '椎咲良田',
-  subtitle: '快走吧 趁风停止之前',
+  subtitle: '快走吧, 趁风停止之前',
   author: '椎咲良田',
-  description: '世界并不美丽，却也因此而美丽',
   avatar: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/avatar.jpg',
   favicon: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/favicon.jpg',
   domain: 'aurora.zmxlt.top',

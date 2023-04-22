@@ -3,8 +3,9 @@
 @use './components/' as *;
 @use './layout.scss' as *;
 @use './home.scss' as *;
-@use './about.scss' as *;
 @use './post.scss' as *;
-@use './friends.scss' as *;
+@use './archives.scss' as *;
+@use './books.scss' as *;
 @use './inspirations.scss';
-@use './books.scss';
+@use './friends.scss' as *;
+@use './about.scss' as *;

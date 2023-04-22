@@ -2,7 +2,7 @@
 @use '../animation.scss' as *;
 @use '../mixin.scss' as *;
 
-header {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,8 +70,12 @@ header {
     transition: color 0.3s ease-out;
 
     @include pc-layout() {
-      font-size: 48px;
+      font-size: 38px;
       line-height: 60px;
+
+      .subtitle {
+        font-size: 28px;
+      }
 
       &:hover {
         color: $link-color;

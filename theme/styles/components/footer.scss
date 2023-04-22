@@ -2,7 +2,7 @@
 @use '../animation.scss' as *;
 @use '../mixin.scss' as *;
 
-footer {
+.footer {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,6 +11,10 @@ footer {
     display: flex;
     flex-direction: column;
     margin: 2px;
+  }
+
+  i[class*=icon-] {
+    margin-right: 4px;
   }
 
   &>div:nth-child(1) {

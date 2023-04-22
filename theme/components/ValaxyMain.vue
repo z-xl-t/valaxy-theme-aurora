@@ -8,13 +8,12 @@ defineProps<{
 </script>
 
 <template>
-  <main>
-    <slot name="main-content">
+  <div class="markdown">
+    <slot name="markdown-content">
       <ValaxyMd :frontmatter="frontmatter">
         <slot name="main-content-md" />
         <slot />
       </ValaxyMd>
     </slot>
-    <slot name="aaa" />
-  </main>
+  </div>
 </template>

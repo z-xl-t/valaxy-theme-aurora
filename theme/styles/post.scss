@@ -59,6 +59,7 @@
         display: flex;
         align-items: center;
         @include clip();
+        overflow: hidden;
 
         &>span {
           display: flex;

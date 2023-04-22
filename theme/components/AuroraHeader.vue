@@ -1,29 +1,32 @@
 <script lang="ts" setup>
 import { useThemeConfig } from '../composables'
+import type { Menu } from '../types'
 
 const themeConfig = useThemeConfig()
-const menu = themeConfig.value.menu || []
+const title = themeConfig.value.title || ''
+const subtitle = themeConfig.value.subtitle || ''
+const menu = (themeConfig.value.menu || []) as Menu[]
 const mobileBgImage = themeConfig.value.mobileBgImage || ''
 </script>
 
 <template>
-  <header>
-    <div class="mobile-bg">
+  <header class="header">
+    <div v-if="mobileBgImage" class="mobile-bg">
       <img :src="mobileBgImage" alt="mobile-bg">
     </div>
-    <h1 class="title">
-      {{ themeConfig.title }}
+    <h1 v-if="title" class="title">
+      {{ title }}
     </h1>
-    <h2 class="description">
-      {{ themeConfig.subtitle }}
+    <h2 v-if="subtitle " class="subtitle">
+      {{ subtitle }}
     </h2>
-    <nav class="menu">
-      <a v-for="(item, index) in menu" :key="index" class="menu-item" :href=" item?.link">
+    <nav v-if="menu" class="menu">
+      <router-link v-for="(item, index) in menu" :key="index" :to="item.link" class="menu-item">
         <li>
           <i :class=" item?.icon" />
           <span>{{ item?.text }}</span>
         </li>
-      </a>
+      </router-link>
     </nav>
   </header>
 </template>

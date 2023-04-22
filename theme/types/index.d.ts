@@ -3,12 +3,11 @@
  */
 export interface ThemeConfig {
   title: string
-  subtitle: string
+  subtitle?: string
   author: string
-  description: string
-  avatar: string
-  favicon: string
-  domain: string
+  avatar?: string
+  favicon?: string
+  domain?: string
   /**
    * Header 栏的子页面
    */

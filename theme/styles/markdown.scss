@@ -2,8 +2,8 @@
 @use './animation.scss' as *;
 @use './mixin.scss' as *;
 
-.markdown-body,
-.markdown {
+.markdown,
+.markdown>.markdown-body {
   text-align: justify;
   font-size: $font-size-normal;
   line-height: $line-height-block;
@@ -146,8 +146,7 @@
     }
 
     code {
-      margin-top: 10px;
-      padding-left: 12px;
+      margin-top: 20px;
     }
 
     .code-copy {

@@ -1,0 +1,118 @@
+@use './vars.scss' as *;
+@use './animation.scss' as *;
+@use './mixin.scss' as *;
+
+.archives {
+  @include card-page();
+  position: relative;
+  padding: 20px;
+
+  .collection {
+    margin: 20px 0;
+  }
+
+  .collection-title {
+    position: relative;
+    margin: 0;
+    border-bottom: 2px solid $purple;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 2px;
+      height: 50%;
+      background: $purple;
+    }
+
+    .archive-year {
+      color: $purple;
+      margin: 0 20px;
+      padding: 0 10px;
+      font-size: 22px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 35%;
+        margin-left: -11px;
+        margin-top: -4px;
+        width: 1.5rem;
+        height: 1.5rem;
+        background: $purple;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .post-item {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: $purple;
+    }
+  }
+
+  .post-header {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    border-bottom: 1px solid $purple;
+    display: flex;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      margin-left: -4px;
+      border-radius: 50%;
+      border: 1px solid var(--va-c-primary);
+      background-color: var(--va-c-bg-light);
+      z-index: 1;
+      transition: background var(--va-transition-duration);
+    }
+
+    &:hover {
+      &::before {
+        background: $purple;
+      }
+    }
+
+    .post-title {
+      margin-left: 0.1rem;
+      padding: 0;
+      display: inline-flex;
+      align-items: center;
+      color: $purple;
+      margin-left: 10px;
+
+      .post-title-link {
+        .icon {
+          width: 1.1rem;
+          height: 1.1rem;
+          margin-right: 0.3rem;
+        }
+      }
+    }
+
+    .post-meta {
+      font-size: 1rem;
+      margin: 1rem 0 1rem 1.2rem;
+      white-space: nowrap;
+    }
+  }
+
+  .last-word {
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+}

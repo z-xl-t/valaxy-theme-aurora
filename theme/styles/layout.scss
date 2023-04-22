@@ -107,7 +107,7 @@ body,
     flex-shrink: 0;
   }
 
-  header {
+  &>header {
     min-height: 200px;
   }
 
@@ -118,7 +118,7 @@ body,
     position: relative;
 
     @include pc-layout() {
-      width: 876px;
+      width: 960px;
     }
 
     @include sp-layout {

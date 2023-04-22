@@ -6,7 +6,7 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <template>
-  <footer>
+  <footer class="footer">
     <div>
       <p>
         <i class="icon-copyright" />
