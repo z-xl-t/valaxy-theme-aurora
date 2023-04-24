@@ -1,5 +1,6 @@
 ---
 title: 长目录测试
+categories: [yyy,第二分类,第三分类]
 ---
 
 ::: zh-CN

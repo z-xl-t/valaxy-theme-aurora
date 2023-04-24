@@ -1,14 +1,15 @@
-<script setup lang="ts">
-import { useFrontmatter, useThemeConfig } from 'valaxy'
+<script lang="ts" setup>
+import { useThemeConfig } from 'valaxy'
+import { useRoute } from 'vue-router'
+import { getMenuQuote } from '../../utils'
 
 const themeConfig = useThemeConfig()
-const frontmatter = useFrontmatter()
-const quote = themeConfig.value.menu.find((m: { link: string }) => m.link.includes('tags')).quote
+const pathName = useRoute().name
+const quote = getMenuQuote(themeConfig.value.menu, pathName)
 </script>
 
 <template>
-  <div class="tags">
+  <div class="categories">
     <AuroraQuote :quote="quote" />
-    {{ frontmatter }}
   </div>
 </template>

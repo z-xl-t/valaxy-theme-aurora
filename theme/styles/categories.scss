@@ -1,0 +1,60 @@
+@use './vars.scss' as *;
+@use './animation.scss' as *;
+@use './mixin.scss' as *;
+
+.categories {
+  @include card-page();
+  flex: 1;
+
+  @include pc-layout {
+    padding: 20px;
+  }
+
+  .category-list {
+    user-select: none;
+
+    .category-header {
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      font-size: 18px;
+
+      span {
+        margin-right: 10px;
+      }
+    }
+
+    .category-post-item {
+      &>a {
+        display: flex;
+        justify-content: left;
+        align-items: center;
+
+        span {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    ul {
+      margin-left: 20px;
+    }
+
+  }
+}
+
+.post-collapse-container {
+  margin-top: 20px;
+  @include card-page();
+  flex: 1;
+  @import './components/postCollapse.scss';
+
+  @include pc-layout {
+    padding: 20px;
+  }
+
+  @include sp-layout() {
+    margin-top: 0px;
+    @include card-page();
+  }
+}
