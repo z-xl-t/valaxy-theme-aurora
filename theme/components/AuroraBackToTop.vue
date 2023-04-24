@@ -30,6 +30,6 @@ function handleScroll() {
 
 <template>
   <div class="btt-wrapper" :class="{ show: isShow, hidden: !isShow }">
-    <div class="back-to-top cursor" @click="scrollTop" />
+    <div class="back-to-top" @click="scrollTop" />
   </div>
 </template>

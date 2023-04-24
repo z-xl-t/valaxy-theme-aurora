@@ -15,11 +15,6 @@
 }
 
 
-// 鼠标样式 
-@mixin cursor($imgUrl) {
-  cursor: $imgUrl auto !important;
-}
-
 // 滚动条
 @mixin scrollBar {
   ::-webkit-scrollbar {

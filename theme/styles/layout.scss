@@ -55,10 +55,6 @@ img {
   object-fit: cover;
 }
 
-a,
-button {
-  @include cursor($cursor-link-img);
-}
 
 a {
 
@@ -101,7 +97,6 @@ body,
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  @include cursor($cursor-img);
 
   &>* {
     flex-shrink: 0;
