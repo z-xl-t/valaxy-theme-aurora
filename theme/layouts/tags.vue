@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <template #main-content>
-      <AuroraBooks />
+      <AuroraTags />
       <router-view />
     </template>
   </Layout>

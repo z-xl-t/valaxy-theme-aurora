@@ -1,12 +1,12 @@
 <script lang="ts" setup>
 import { useRoute } from 'vue-router'
 import { useFrontmatter, useThemeConfig } from 'valaxy'
-import { getMenuQuote, getRandomColorArr } from '../utils'
+import { getMenuQuote, getRandomColorArr } from '../../utils'
 
 const frontmatter = useFrontmatter()
 const themeConfig = useThemeConfig()
-const themeColors = themeConfig.value.themeColors
-const introductionLength = frontmatter.value.introduction.length
+const themeColors = themeConfig.value?.themeColors || []
+const introductionLength = frontmatter.value?.introduction?.length || 0
 
 const getRandomColors = getRandomColorArr(themeColors, introductionLength)
 

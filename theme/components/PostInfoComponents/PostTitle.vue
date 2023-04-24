@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 defineProps<{
-  title: string
-  level: string
+  title: string | undefined
+  level: string | undefined
 }>()
 </script>
 

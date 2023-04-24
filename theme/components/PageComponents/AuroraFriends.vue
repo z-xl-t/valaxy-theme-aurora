@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useFrontmatter, useThemeConfig } from 'valaxy'
 import { useRoute } from 'vue-router'
-import { useFetchData } from '../composables'
-import { getMenuQuote, onImgError } from '../utils'
-import type { firendType } from '../types'
+import { useFetchData } from '../../composables'
+import { getMenuQuote, onImgError } from '../../utils'
+import type { firendType } from '../../types'
 
 const themeConfig = useThemeConfig()
 const defaultAvatar = themeConfig.value.defaultFriendAvatarImage || ''
@@ -22,7 +22,7 @@ const quote = getMenuQuote(themeConfig.value.menu, pathName)
     <ul v-if="data" class="friend-list">
       <li v-for="(d, i) in data" :key="i" class="friend">
         <div class="site-img">
-          <img :src="d?.siteImg" alt="siteImg" @error="(e) => onImgError(e, defaultBg)">
+          <img :src="d.siteImg" alt="siteImg" @error="(e) => onImgError(e, defaultBg)">
         </div>
         <div class="site-info">
           <div class="avatar">

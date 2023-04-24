@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import { useFrontmatter, useThemeConfig } from 'valaxy'
-import { getMenuQuote } from '../utils'
-import type { bookType } from '../types'
-import { useFetchData } from '../composables'
+import { getMenuQuote } from '../../utils'
+import type { bookType } from '../../types'
+import { useFetchData } from '../../composables'
 
 const themeConfig = useThemeConfig()
 const frontmatter = useFrontmatter()

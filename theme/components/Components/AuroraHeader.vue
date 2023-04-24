@@ -1,6 +1,6 @@
 <script lang="ts" setup>
-import { useThemeConfig } from '../composables'
-import type { Menu } from '../types'
+import { useThemeConfig } from '../../composables'
+import type { Menu } from '../../types'
 
 const themeConfig = useThemeConfig()
 const title = themeConfig.value.title || ''

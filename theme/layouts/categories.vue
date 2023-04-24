@@ -1,7 +1,8 @@
 <template>
   <Layout>
     <template #main-content>
-      <AuroraAbout />
+      <AuroraCategories />
+      <router-view />
     </template>
   </Layout>
 </template>

@@ -15,19 +15,19 @@ export interface ThemeConfig {
   /**
    * 默认背景颜色，背景图片(电脑页面/手机页面) 默认文章封面、默认友链头像和主题背景
    */
-  defaultBgColor: string
-  pcBgImage: string
-  mobileBgImage: string
-  defaultPostCoverImage: string
-  defaultFriendAvatarImage:string
-  defaultFriendBgImage: string
+  defaultBgColor?: string
+  pcBgImage?: string
+  mobileBgImage?: string
+  defaultPostCoverImage?: string
+  defaultFriendAvatarImage?:string
+  defaultFriendBgImage?: string
+  defaultErrorImage?: string
   
   footer: Partial<{
     since: number
     /**
      * Powered by valaxy & valaxy-theme-${name}, default is yun
      */
-    powered: boolean
     title: string
     subtitle: string
     themeName: string
@@ -53,7 +53,7 @@ export interface firendType {
   siteUrl: string
   siteImg: string
   avatar: string
-} 
+}
 
 /**
  * inspiration Type
@@ -61,8 +61,8 @@ export interface firendType {
 export interface inspirationType {
   time: string
   moment: string
-  imgUrl: string
-  imgDesc: string
+  imgUrl?: string
+  imgDesc?: string
 }
 
 /**
@@ -76,7 +76,7 @@ export interface bookType {
   source: string
   publicationTime: string
   description: string
-  recommendIndex: numb1
+  recommendIndex: number
 }
 
 export type ThemeUserConfig = Partial<ThemeConfig>

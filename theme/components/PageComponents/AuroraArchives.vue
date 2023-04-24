@@ -4,8 +4,7 @@ import { useRoute } from 'vue-router'
 import { formatDate, sortByDate, useSiteStore, useThemeConfig } from 'valaxy'
 import type { Post } from 'valaxy'
 
-import { getMenuQuote } from '../utils'
-import AuroraQuote from './AuroraQuote.vue'
+import { getMenuQuote } from '../../utils'
 
 const themeConfig = useThemeConfig()
 const site = useSiteStore()

@@ -2,7 +2,7 @@
 import { useThemeConfig } from 'valaxy'
 
 defineProps<{
-  imageUrl: string
+  imageUrl: string | undefined
 }>()
 
 const themeConfig = useThemeConfig()

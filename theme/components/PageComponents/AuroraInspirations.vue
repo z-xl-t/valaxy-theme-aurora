@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { useFrontmatter, useMediumZoom, useThemeConfig } from 'valaxy'
 import { useRoute } from 'vue-router'
-import { useFetchData } from '../composables'
-import { getMenuQuote, getRandomColorArr } from '../utils'
-import type { inspirationType } from '../types'
+import { useFetchData } from '../../composables'
+import { getMenuQuote, getRandomColorArr } from '../../utils'
+import type { inspirationType } from '../../types'
 
 const themeConfig = useThemeConfig()
 
