@@ -138,11 +138,11 @@ body,
   }
 
   .btt-wrapper {
-    &.hidden {
+    &.bt-hidden {
       transform: translateY(-100%)
     }
 
-    &.show {
+    &.bt-show {
       transform: translateY(0)
     }
 

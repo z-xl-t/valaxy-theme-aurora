@@ -29,7 +29,7 @@ function handleScroll() {
 </script>
 
 <template>
-  <div class="btt-wrapper" :class="{ show: isShow, hidden: !isShow }">
+  <div class="btt-wrapper" :class="{ 'bt-show': isShow, 'bt-hidden': !isShow }">
     <div class="back-to-top" @click="scrollTop" />
   </div>
 </template>
