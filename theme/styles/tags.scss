@@ -1,0 +1,27 @@
+@use './vars.scss' as *;
+@use './animation.scss' as *;
+@use './mixin.scss' as *;
+
+
+.tags {
+  flex: 1;
+  @include card-page();
+  user-select: none;
+  padding: 20px;
+  flex-shrink: 0;
+  height: 900px;
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag {
+    margin: 4px;
+
+    .count {
+      margin-left: 4px;
+      font-size: 12px;
+    }
+  }
+}

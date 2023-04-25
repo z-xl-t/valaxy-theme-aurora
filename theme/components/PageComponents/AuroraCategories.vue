@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useCategories, useSiteStore, useThemeConfig } from 'valaxy'
 import { computed, ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
 import { getMenuQuote } from '../../utils'
 
 const themeConfig = useThemeConfig()
@@ -13,6 +13,7 @@ const collapsable = ref(true)
 const level = ref(0)
 
 const route = useRoute()
+const router = useRouter()
 const curCategory = computed(() => (route.query.category as string || ''))
 
 const posts = computed(() => {
@@ -29,6 +30,15 @@ const posts = computed(() => {
   })
   return list
 })
+
+function backCategory() {
+  const name = route.name
+  if (name) {
+    router.push({
+      name,
+    })
+  }
+}
 </script>
 
 <template>
@@ -42,9 +52,8 @@ const posts = computed(() => {
         :collapsable="collapsable"
       />
     </ul>
-    <router-view />
-  </div>
-  <div v-if="curCategory" class="post-collapse-container">
-    <AuroraPostCollapse :posts="posts" />
+    <div class="post-collapse-container" :class="{ show: curCategory, hidden: !curCategory }">
+      <AuroraPostCollapse :title="curCategory" :posts="posts" :back="backCategory" />
+    </div>
   </div>
 </template>

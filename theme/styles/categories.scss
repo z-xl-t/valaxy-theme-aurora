@@ -42,19 +42,3 @@
 
   }
 }
-
-.post-collapse-container {
-  margin-top: 20px;
-  @include card-page();
-  flex: 1;
-  @import './components/postCollapse.scss';
-
-  @include pc-layout {
-    padding: 20px;
-  }
-
-  @include sp-layout() {
-    margin-top: 0px;
-    @include card-page();
-  }
-}

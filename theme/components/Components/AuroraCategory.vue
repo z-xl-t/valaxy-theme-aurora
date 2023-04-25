@@ -2,9 +2,10 @@
 import { ref } from 'vue'
 import type { Category, PostFrontMatter } from 'valaxy'
 import { useRouter } from 'vue-router'
+import { smoothScrollToSelector } from '../../utils'
 
 const props = withDefaults(defineProps<{
-  parentKey?: string
+  parentKey: string
   category?: Category
   level?: number
   collapsable?: boolean
@@ -21,6 +22,7 @@ function jumpToDisplayCategory(category: string) {
       category,
     },
   })
+  smoothScrollToSelector('.post-collapse-container')
 }
 
 const postItems = ref<Partial<PostFrontMatter>[]>([])
@@ -40,7 +42,7 @@ props?.category?.children.forEach((item) => {
       <div v-if="collapse" i-ri-folder-add-line />
       <div v-else i-ri-folder-reduce-line /></span>
     <span @click="jumpToDisplayCategory(parentKey)">
-      {{ category.name === 'Uncategorized' ? '未分类' : category.name }} [{{ category.total }}]
+      {{ category?.name === 'Uncategorized' ? '未分类' : category?.name }} [{{ category?.total }}]
     </span>
   </div>
   <div v-if="!collapse" class="category-container">
