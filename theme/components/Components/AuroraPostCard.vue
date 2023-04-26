@@ -25,9 +25,9 @@ const path = props.post.path || '/404'
       <PostDescription :description="description" />
       <div class="post-meta-wrapper">
         <div class="post-meta">
-          <PostTimeAgo :date="date" />
-          <PostTags :tags="tags" />
-          <PostCategories :categories="categories" />
+          <PostTimeAgo v-if="date" :date="date" />
+          <PostCategories v-if="categories.length" :categories="categories" />
+          <PostTags v-if="tags.length" :tags="tags" />
         </div>
       </div>
       <router-link :to="path" class="post-link" />
@@ -36,11 +36,11 @@ const path = props.post.path || '/404'
       <div class="post-header">
         <PostImage :image-url="imageUrl" />
         <div class="post-meta-wrapper">
-          <PostTitle :title="title" level="h1" />
+          <PostTitle v-if="title" :title="title" level="h1" />
           <div class="post-meta">
-            <PostTimeAgo :date="date" />
-            <PostTags :tags="tags" />
-            <PostCategories :categories="categories" />
+            <PostTimeAgo v-if="date" :date="date" />
+            <PostCategories v-if="categories.length" :categories="categories" />
+            <PostTags v-if="tags.length" :tags="tags" />
           </div>
         </div>
       </div>

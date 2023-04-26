@@ -3,13 +3,13 @@
 
 // 基本布局
 @mixin pc-layout {
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 960px) {
     @content;
   }
 }
 
 @mixin sp-layout {
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: 959px) {
     @content;
   }
 }
@@ -18,26 +18,19 @@
 // 滚动条
 @mixin scrollBar {
   ::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
+    width: 2px;
+    height: 2px;
     background-color: transparent;
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 4px;
-    background-color: $purple-dim;
-    background-image: -webkit-linear-gradient(45deg,
-        rgba(255, 255, 255, 0.4) 25,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.4) 50%,
-        rgba(255, 255, 255, 0.4) 75,
-        transparent 75%,
-        transparent);
+    border-radius: 2px;
+    background-color: white;
+
   }
 
   ::-webkit-scrollbar-track {
-    background-color: $grey-dim;
+    background-color: white;
   }
 }
 
@@ -59,7 +52,6 @@
 // K卡片轮廓
 
 @mixin card {
-
   border-radius: 3px;
   background-color: $bg-white-deep;
 
@@ -69,7 +61,6 @@
   }
 
   @include sp-layout() {
-
     box-shadow: $card-shadow-light;
   }
 }
@@ -89,11 +80,9 @@
 }
 
 @mixin card-page() {
-
   border-radius: 3px;
 
   @include pc-layout() {
-
     background-color: $bg-white-dim;
     box-shadow: $card-shadow-base;
   }
@@ -129,7 +118,6 @@
 
 @mixin link {
   position: relative;
-  color: $link-color;
 
   &::after {
     content: '';
@@ -138,7 +126,8 @@
     left: 0;
     width: 100%;
     height: 1.5px;
-    background-color: $link-color;
+    word-wrap: break-word;
+    background-color: currentColor;
     transform: scaleX(0);
     transform-origin: bottom right;
     transition: transform 0.3s ease-out;
@@ -149,27 +138,5 @@
       transform-origin: bottom left;
       transform: scaleX(1);
     }
-
-    &::before {
-      opacity: 1;
-      transform: scale(1) translateY(-100%);
-    }
-  }
-
-  &:before {
-    content: '\e809  ' attr(href);
-    position: absolute;
-    padding: 0px 4px;
-    width: max-content;
-    pointer-events: none;
-    font-family: 'Fontello';
-    font-size: $font-size-small;
-    box-shadow: $card-shadow-light;
-    border-radius: 3px;
-    background-color: white;
-    opacity: 0;
-    transform: scale(0.7) translateY(-75%);
-    transform-origin: left center;
-    transition: all 0.3s ease 0s;
   }
 }

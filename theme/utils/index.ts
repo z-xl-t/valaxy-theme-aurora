@@ -27,8 +27,8 @@ export function getRandomColorArr(colorArr: string[], length: number) {
   return arr
 }
 
-export function getMenuQuote(menu: Menu[], link: any) {
-  const quote = menu.find((m: { link: string }) => m.link.includes(link))?.quote || ''
+export function getMenuQuote(menu: Menu[], href: any) {
+  const quote = menu.find((m: { href: string }) => m.href.includes(href))?.quote || ''
   return quote
 }
 

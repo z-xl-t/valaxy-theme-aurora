@@ -8,6 +8,6 @@ export default defineSiteConfig({
   favicon: '/favicon.jpg',
   mediumZoom: {
     enable: true,
-    selector: '.markdown-body img',
+    selector: 'img',
   },
 })

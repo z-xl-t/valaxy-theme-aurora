@@ -8,47 +8,51 @@ export interface ThemeConfig {
   avatar?: string
   favicon?: string
   domain?: string
-  /**
-   * Header 栏的子页面
-   */
-  menu: Partial<Menu[]>
-  /**
-   * 默认背景颜色，背景图片(电脑页面/手机页面) 默认文章封面、默认友链头像和主题背景
-   */
-  defaultBgColor?: string
-  pcBgImage?: string
-  mobileBgImage?: string
+  defaultSiteBgColor?: string
+  defaultSiteColor?: string
+  siteBgImage?: string
+  themeColors?: String[]
   defaultPostCoverImage?: string
   defaultFriendAvatarImage?:string
   defaultFriendBgImage?: string
   defaultErrorImage?: string
-  
+  iconStyle: {
+    href: string
+    postCalendar: string
+    postCategory: string
+    postTag: string
+    quoteLeft: string
+    quoteRight: string
+    footerCopyright: string
+    footerTitle: string
+    bookRecIndex: string
+  }
+  menu: Partial<Menu[]>
   footer: Partial<{
+    beian?: {
+      enable: boolean
+      icp?: string
+    }
     since: number
-    /**
-     * Powered by valaxy & valaxy-theme-${name}, default is yun
-     */
     title: string
-    subtitle: string
-    themeName: string
-    themeAddress: string
+    powered: boolean
   }>
-  themeColors: String[]
 }
 
 export interface Menu {
   text: string
-  link: string
+  href: string
   quote: string
-  icon: string
+  icon?: string
 }
+
 
 
 /**
  * friend link Type
  */
 
-export interface firendType {
+export interface friendType {
   name: string
   siteUrl: string
   siteImg: string

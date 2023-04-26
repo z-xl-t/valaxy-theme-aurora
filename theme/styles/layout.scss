@@ -11,8 +11,8 @@
 }
 
 ::selection {
-  background: $selection-bg;
-  color: $selection-color;
+  background: var(--aurora-default-bg-color);
+  color: var(--aurora-default-color);
 }
 
 body {
@@ -57,7 +57,6 @@ img {
 
 
 a {
-
   color: inherit;
   text-decoration: none;
   outline: none;
@@ -79,10 +78,18 @@ button {
 }
 
 
+.icon {
+  width: 1.2em;
+  height: 1.2em;
+  line-height: 1.2em;
+}
+
+
 html,
 body,
 #app,
 .layout {
+  width: 100%;
   height: 100%;
   min-height: 100%;
   font-family: $font-family-base;
@@ -91,6 +98,31 @@ body,
     @include scrollBar();
   }
 }
+
+
+
+.medium-zoom-overlay {
+  z-index: 888;
+}
+
+.medium-zoom-image--opened {
+  z-index: 999;
+}
+
+.pagination .prev.active,
+.pagination .next.active,
+.pagination .page-number {
+
+  &:hover {
+    background-color: var(--aurora-default-color) !important;
+  }
+}
+
+.pagination .page-number.active {
+
+  background-color: var(--aurora-default-bg-color) !important;
+}
+
 
 // layout scss
 .layout {
@@ -116,8 +148,9 @@ body,
       width: 960px;
     }
 
-    @include sp-layout {
+    @include sp-layout() {
       width: 100%;
+      background-color: rgba(255, 255, 255, 0.65)
     }
 
     .main-content {
@@ -130,6 +163,8 @@ body,
         flex: 1;
         @include card-page();
       }
+
+
     }
   }
 
@@ -137,68 +172,7 @@ body,
     min-height: 80px;
   }
 
-  .btt-wrapper {
-    &.bt-hidden {
-      transform: translateY(-100%)
-    }
-
-    &.bt-show {
-      transform: translateY(0)
-    }
-
-    position: fixed;
-    top: 0;
-    right: 20px;
-    width: 70px;
-    height: 900px;
-    z-index: $zIndex-3;
-    will-change: transform;
-    transition: transform .3s ease-out;
-
-    @include sp-layout {
-      display: none;
-    }
-
-    .back-to-top {
-      width: 100%;
-      height: 100%;
-      background-image: $backToTop-bg;
-      background-size: contain;
-      background-repeat: no-repeat;
-      background-position: center center;
-      animation: float 3s linear infinite;
-    }
+  a {
+    color: var(--aurora-default-color);
   }
-
-  .bg {
-    @include fillParent(fixed, $zIndex-bottom);
-    width: 100%;
-    height: 100%;
-
-    &::after {
-      content: '';
-      @include fillParent(absolute, $zIndex-1);
-      background-color: rgba(255, 255, 255, 0.65);
-    }
-
-    .pc-static-bg {
-      @include fillParent(fixed, $zIndex-bottom);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-      }
-
-      @include pc-layout() {}
-
-      @include sp-layout() {
-        display: none;
-      }
-    }
-  }
-
 }

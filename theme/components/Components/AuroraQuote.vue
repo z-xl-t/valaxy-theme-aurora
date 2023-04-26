@@ -6,10 +6,10 @@ defineProps<{
 
 <template>
   <div class="quote">
-    <i class="icon-quote-left" />
+    <span class="quote-icon-left i-ri:double-quotes-l" />
     <span class="quote-content">
       {{ quote }}
     </span>
-    <i class="icon-quote-right" />
+    <span class="quote-icon-right i-ri:double-quotes-r" />
   </div>
 </template>

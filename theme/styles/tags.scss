@@ -6,8 +6,7 @@
 .tags {
   flex: 1;
   @include card-page();
-  user-select: none;
-  padding: 20px;
+  padding: 16px;
   flex-shrink: 0;
   height: 900px;
 
@@ -18,6 +17,8 @@
 
   .tag {
     margin: 4px;
+    user-select: none;
+    cursor: pointer;
 
     .count {
       margin-left: 4px;

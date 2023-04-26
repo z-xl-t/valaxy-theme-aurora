@@ -42,7 +42,7 @@ const quote = getMenuQuote(themeConfig.value.menu, pathName)
       </div>
     </div>
     <div v-if="frontmatter.contact" class="contact">
-      <a v-for="(con, i) in frontmatter.contact" :key="i" :href="con.link">
+      <a v-for="(con, i) in frontmatter.contact" :key="i" :href="con.link" target="_blank">
         <img :src="con.icon" alt="icon" class="icon">
       </a>
     </div>

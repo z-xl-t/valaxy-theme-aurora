@@ -58,7 +58,7 @@
     .img-box {
 
       text-align: center;
-      color: $text-color;
+      color: var(--aurora-default-color);
 
       .desc {
         margin-top: 10px;
@@ -75,7 +75,7 @@
       user-select: none;
 
       &:hover {
-        border-color: $purple-dark;
+        border-color: var(--aurora-default-bg-color);
       }
 
       span {
@@ -87,9 +87,5 @@
       }
     }
 
-    .medium-zoom-overlay,
-    .medium-zoom-image--opened {
-      z-index: 999;
-    }
   }
 }

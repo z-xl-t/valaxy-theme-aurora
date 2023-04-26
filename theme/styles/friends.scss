@@ -41,7 +41,7 @@
           }
 
           .name {
-            color: $link-color;
+            color: var(--aurora-default-color);
           }
         }
       }

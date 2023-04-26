@@ -14,40 +14,12 @@
   }
 
   @include sp-layout() {
-    margin-bottom: 4%;
-    padding: 40px 0;
-    color: white;
+    padding-top: 20px;
+    justify-content: space-between;
+    background-color: $bg-dark;
+    box-shadow: 0 0 10px $bg-dark-dim inset;
   }
 
-  .mobile-bg {
-    @include fillParent(absolute, $zIndex-0);
-    background-position: bottom;
-    background-repeat: no-repeat;
-
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      -o-object-fit: cover;
-    }
-
-    @include pc-layout() {
-      display: none;
-    }
-
-    @include sp-layout() {
-
-      background-color: #cfd0f8;
-      background-size: cover;
-
-      &::after {
-
-        content: '';
-        @include fillParent(absolute, $zIndex-0);
-        background-color: hsla(0, 0%, 100%, .4);
-      }
-    }
-  }
 
   .title,
   .subtitle {
@@ -78,7 +50,7 @@
       }
 
       &:hover {
-        color: $link-color;
+        color: var(--aurora-default-color);
       }
     }
 
@@ -112,13 +84,14 @@
     margin-top: 10px;
     overflow: hidden;
 
+    background-color: $bg-dark;
+    box-shadow: 0 0 10px $bg-dark-dim inset;
+    transition: all 0.5s ease;
+    animation: fadeIn 0.5s ease-out;
+
     @include pc-layout() {
       padding: 0 32px;
       height: 60px;
-      background-color: $bg-dark;
-      box-shadow: 0 0 10px $bg-dark-dim inset;
-      transition: all 0.5s ease;
-      animation: fadeIn 0.5s ease-out;
 
       &:hover {
         border-radius: 30px;
@@ -126,17 +99,12 @@
     }
 
     @include sp-layout() {
-
       width: 100%;
       height: 56px;
-      transform: translateY(40px);
-      text-shadow: 0 0 1px $bg-dark-dim;
-      box-shadow: 0 -1px 2px $bg-dark;
-      background-color: rgba(25, 24, 35, 0.3);
     }
 
     .menu-item {
-
+      color: $text-color;
       width: 50px;
       transition: color 0.3s ease;
 
@@ -145,7 +113,7 @@
 
         &:hover {
 
-          color: $link-color;
+          color: var(--aurora-default-color);
         }
       }
 
@@ -160,6 +128,10 @@
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
+
+        &>i {
+          line-height: 1.2;
+        }
       }
     }
   }

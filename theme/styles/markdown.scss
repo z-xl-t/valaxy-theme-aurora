@@ -2,12 +2,16 @@
 @use './animation.scss' as *;
 @use './mixin.scss' as *;
 
+
+.markdown {
+  padding: 20px;
+}
+
 .markdown,
-.markdown>.markdown-body {
+.markdown-body {
   text-align: justify;
   font-size: $font-size-normal;
   line-height: $line-height-block;
-  padding: 16px;
 
   .loading {
     position: relative;
@@ -63,19 +67,11 @@
     font-weight: bold;
     line-height: 1.5;
 
-    i {
-      padding-right: 6px;
-    }
-
-    .icon-gift::before,
-    .icon-pagelines::before {
-      transform: translateY(-2px);
-    }
-
     &:hover {
-      color: $purple-deep;
+      color: var(--aurora-default-color);
     }
   }
+
 
   h1+h2,
   h2+h3,
@@ -161,11 +157,6 @@
       text-align: center;
       color: #888;
       transition: all ease 0.3s;
-
-      &:hover {
-        color: $purple;
-        transform: translateY(-3px);
-      }
     }
   }
 
@@ -197,7 +188,7 @@
   ul {
     code {
       padding: 2px 4px;
-      color: $purple-deep;
+      color: var(--aurora-default-color);
       font-size: $font-size-code;
       word-wrap: break-word;
       border-radius: 3px;
@@ -246,50 +237,16 @@
     }
   }
 
-  span[class*='img-box'] {
-    position: relative;
-    display: block;
-    margin: 0 auto 25px;
-    text-align: center;
+  img {
     border-radius: 3px;
 
-    &.full {
-      margin: 0 -16px;
+    box-shadow: $card-shadow;
+    transition: all 0.3s ease-out, opacity 0.8s ease-out;
+    border: 6px solid transparent;
+    transition: all 0.3s ease-out;
 
-      .bg,
-      img {
-        border-radius: unset;
-      }
-    }
-
-    .bg {
-      display: flex;
-      justify-content: center;
-      align-content: center;
-      position: absolute;
-      top: 0;
-      left: 50%;
-      max-width: 100%;
-      border-radius: 3px;
-      background-color: $bg-dark;
-      transform: translateX(-50%);
-    }
-
-    img {
-      position: relative;
-      margin: 16px auto;
-      max-width: 100%;
-      opacity: 0;
-      border-radius: 3px;
-      overflow: hidden;
-      box-shadow: $card-shadow;
-      transition: all 0.3s ease-out, opacity 0.8s ease-out;
-    }
-
-    .title {
-      display: block;
-      padding-top: 8px;
-      font-style: italic;
+    &:hover {
+      border-color: var(--aurora-default-color);
     }
   }
 

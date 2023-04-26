@@ -5,10 +5,7 @@
 .categories {
   @include card-page();
   flex: 1;
-
-  @include pc-layout {
-    padding: 20px;
-  }
+  padding: 16px;
 
   .category-list {
     user-select: none;
@@ -18,6 +15,7 @@
       justify-content: left;
       align-items: center;
       font-size: 18px;
+      cursor: pointer;
 
       span {
         margin-right: 10px;

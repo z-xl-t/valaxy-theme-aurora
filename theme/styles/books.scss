@@ -142,9 +142,14 @@
             margin: 10px 0;
           }
 
-          .icon-star {
+          .rec-index {
+            display: flex;
+            align-items: center;
+          }
+
+          i[class*=icon-] {
             margin-right: 4px;
-            color: $purple;
+            color: var(--aurora-default-color);
           }
         }
       }

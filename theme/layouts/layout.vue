@@ -1,3 +1,6 @@
+<script setup lang="ts">
+</script>
+
 <template>
   <div class="layout">
     <AuroraHeader />
@@ -7,7 +10,6 @@
       </div>
     </main>
     <AuroraFooter />
-    <AuroraBackToTop />
-    <AuroraPcBg />
+    <AuroraBg />
   </div>
 </template>

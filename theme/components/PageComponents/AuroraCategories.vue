@@ -52,7 +52,7 @@ function backCategory() {
         :collapsable="collapsable"
       />
     </ul>
-    <div class="post-collapse-container" :class="{ show: curCategory, hidden: !curCategory }">
+    <div class="post-collapse-container">
       <AuroraPostCollapse :title="curCategory" :posts="posts" :back="backCategory" />
     </div>
   </div>

@@ -3,14 +3,14 @@ import { useFrontmatter, useThemeConfig } from 'valaxy'
 import { useRoute } from 'vue-router'
 import { useFetchData } from '../../composables'
 import { getMenuQuote, onImgError } from '../../utils'
-import type { firendType } from '../../types'
+import type { friendType } from '../../types'
 
 const themeConfig = useThemeConfig()
 const defaultAvatar = themeConfig.value.defaultFriendAvatarImage || ''
 const defaultBg = themeConfig.value.defaultFriendBgImage || ''
 
 const frontmatter = useFrontmatter()
-const data = typeof (frontmatter.value.links) === 'string' ? useFetchData<firendType>(frontmatter.value.links) : frontmatter.value.links as firendType[]
+const data = typeof (frontmatter.value.links) === 'string' ? useFetchData<friendType>(frontmatter.value.links) : frontmatter.value.links as friendType[]
 
 const pathName = useRoute().name
 const quote = getMenuQuote(themeConfig.value.menu, pathName)

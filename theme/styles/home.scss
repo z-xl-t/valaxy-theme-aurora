@@ -13,10 +13,6 @@
       justify-content: space-between;
     }
 
-    @include sp-layout() {
-      justify-content: space-around;
-    }
-
     article {
       @include card-light();
       overflow: hidden;
@@ -53,8 +49,7 @@
       }
 
       @include sp-layout() {
-        width: 94%;
-        margin: 0 3% 4%;
+        width: 100%;
       }
 
       .post-overview {
@@ -97,7 +92,6 @@
             .title {
               font-size: $font-size-larger;
               font-weight: $font-weight-normal;
-              @include clip()
             }
           }
         }
@@ -171,15 +165,8 @@
               }
             }
 
-            .icon-calendar,
-            .icon-fire,
-            .icon-tag,
-            .icon-bookmark-empty {
+            i[class*=icon-] {
               margin-right: 4px;
-            }
-
-            .icon-calendar .icon-fire {
-              margin-top: -2px;
             }
 
             @include sp-layout() {

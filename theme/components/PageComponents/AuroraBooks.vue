@@ -7,7 +7,7 @@ import { useFetchData } from '../../composables'
 
 const themeConfig = useThemeConfig()
 const frontmatter = useFrontmatter()
-
+const iconRecIndex = themeConfig.value.iconStyle.bookRecIndex
 const pathName = useRoute().name
 const quote = getMenuQuote(themeConfig.value.menu, pathName)
 const data = typeof (frontmatter.value.books) === 'string' ? useFetchData<bookType>(frontmatter.value.books) : frontmatter.value.books as bookType[]
@@ -36,10 +36,10 @@ const data = typeof (frontmatter.value.books) === 'string' ? useFetchData<bookTy
             <p v-if="b.publicationTime">
               {{ `出版时间：${b.publicationTime}` }}
             </p>
-            <p v-if="b.recommendIndex" class="rec-indx">
+            <div v-if="b.recommendIndex" class="rec-index">
               <span>推荐指数：</span>
-              <span v-for="j in b.recommendIndex" :key="j" class="icon-star" />
-            </p>
+              <i v-for="j in b.recommendIndex" :key="j" class="icon-rec-index" :class="iconRecIndex" />
+            </div>
           </div>
         </div>
 

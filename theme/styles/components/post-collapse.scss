@@ -15,7 +15,7 @@
   .collection-title {
     position: relative;
     margin: 0;
-    border-bottom: 2px solid $purple;
+    border-bottom: 2px solid var(--aurora-default-color);
 
     &::before {
       content: '';
@@ -23,11 +23,11 @@
       top: 50%;
       width: 2px;
       height: 50%;
-      background: $purple;
+      background: var(--aurora-default-color);
     }
 
     .archive-year {
-      color: $purple;
+      color: var(--aurora-default-color);
       margin: 0 20px;
       padding: 0 10px;
       font-size: 22px;
@@ -41,7 +41,7 @@
         margin-top: -4px;
         width: 1.5rem;
         height: 1.5rem;
-        background: $purple;
+        background: var(--aurora-default-color);
         border-radius: 50%;
       }
     }
@@ -55,7 +55,7 @@
       position: absolute;
       width: 2px;
       height: 100%;
-      background: $purple;
+      background: var(--aurora-default-color);
     }
   }
 
@@ -64,7 +64,7 @@
     align-items: center;
 
     position: relative;
-    border-bottom: 1px solid $purple;
+    border-bottom: 1px solid var(--aurora-default-color);
     display: flex;
 
     &::before {
@@ -83,7 +83,7 @@
 
     &:hover {
       &::before {
-        background: $purple;
+        background: var(--aurora-default-color);
       }
     }
 
@@ -92,7 +92,7 @@
       padding: 0;
       display: inline-flex;
       align-items: center;
-      color: $purple;
+      color: var(--aurora-default-color);
       margin-left: 10px;
 
       .post-title-link {

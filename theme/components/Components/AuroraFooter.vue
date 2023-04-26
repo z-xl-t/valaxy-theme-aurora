@@ -1,31 +1,36 @@
 <script lang="ts" setup>
-import { useThemeConfig } from '../../composables'
+import { useThemeConfig, useValaxyConfig } from 'valaxy'
+
+import valaxyPkg from 'valaxy/package.json'
 
 const themeConfig = useThemeConfig()
 const currentYear = new Date().getFullYear()
+
+const valaxyConfig = useValaxyConfig()
 </script>
 
 <template>
   <footer class="footer">
-    <div>
-      <p>
-        <i class="icon-copyright" />
+    <div v-if="(themeConfig.footer?.beian || themeConfig.footer.beian?.enable) && themeConfig.footer.beian.icp" class="beian">
+      <a href="https://beian.miit.gov.cn/" target="_blank" rel="noopener">
+        {{ themeConfig.footer.beian.icp }}
+      </a>
+    </div>
+    <div class="footer-info">
+      <div class="i-ri-copyright-line" />
+      <div class="time">
         <span>{{ themeConfig.footer.since }}</span>
         <span>-</span>
         <span>{{ currentYear }}</span>
-      </P>
-      <p>
-        <a :href="themeConfig.footer.themeAddress">{{ themeConfig.footer.themeName }}</a>
-      </p>
+      </div>
+      <div class="i-ri-heart-2-line" />
+      <span class="title">{{ themeConfig.footer.title }}</span>
     </div>
-    <div>
-      <p>
-        <i class="icon-heart" />
-        <span>{{ themeConfig.footer.title }}</span>
-      </p>
-      <p>
-        <span>{{ themeConfig.footer.subtitle }}</span>
-      </p>
+
+    <div v-if="themeConfig.footer.powered" class="powered">
+      <span>由 <a :href="valaxyPkg.repository" target="_blank" rel="noopener">Valaxy</a> v {{ valaxyPkg.version }} 驱动</span>
+      <span>| 主题 - </span>
+      <span><a :href="themeConfig.pkg.repository" target="_blank" rel="noopener" :title="themeConfig.pkg.name">{{ valaxyConfig.theme }}</a> v {{ themeConfig.pkg.version }}</span>
     </div>
   </footer>
 </template>

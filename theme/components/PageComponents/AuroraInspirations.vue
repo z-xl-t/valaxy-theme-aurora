@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useFrontmatter, useMediumZoom, useThemeConfig } from 'valaxy'
+import { useFrontmatter, useThemeConfig } from 'valaxy'
 import { useRoute } from 'vue-router'
 import { useFetchData } from '../../composables'
 import { getMenuQuote, getRandomColorArr } from '../../utils'
@@ -7,11 +7,10 @@ import type { inspirationType } from '../../types'
 
 const themeConfig = useThemeConfig()
 
-useMediumZoom()
 const frontmatter = useFrontmatter()
 const data = typeof (frontmatter.value.inspirations) === 'string' ? useFetchData<inspirationType>(frontmatter.value.inspirations) : frontmatter.value.inspirations as inspirationType[]
 
-const themeColors = themeConfig.value.themeColors
+const themeColors = themeConfig.value?.themeColors || []
 const introductionLength = data.length
 const getRandomColors = getRandomColorArr(themeColors, introductionLength)
 

@@ -4,35 +4,25 @@
 
 .footer {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 10px;
 
-  &>div {
+  .footer-info {
     display: flex;
-    flex-direction: column;
-    margin: 2px;
-  }
+    justify-content: center;
+    align-items: center;
 
-  i[class*=icon-] {
-    margin-right: 4px;
-  }
-
-  &>div:nth-child(1) {
-    text-align: right;
-  }
-
-  &>div:nth-child(2) {
-    text-align: left;
-  }
-
-  &>p {
-    a {
-      transition: color 0.3s ease;
-
-      &:hover {
-        color: $link-color;
-      }
+    &>* {
+      margin-right: 2px;
     }
   }
+
+  .powered {
+    margin: 4px 0;
+  }
+
 
 }

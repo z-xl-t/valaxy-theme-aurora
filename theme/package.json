@@ -8,10 +8,7 @@
     "url": "https://zxlt.top"
   },
   "homepage": "https://aurora.zxlt.top",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/zmxlt/valaxy-theme-aurora"
-  },
+  "repository": "https://github.com/zmxlt/valaxy-theme-aurora",
   "keywords": [
     "valaxy",
     "theme",
@@ -21,8 +18,6 @@
   "main": "client/index.ts",
   "types": "types/index.d.ts",
   "dependencies": {
-    "@iconify-json/ant-design": "^1.1.5",
-    "@iconify-json/simple-icons": "^1.1.48",
     "dayjs": "^1.11.7"
   },
   "devDependencies": {

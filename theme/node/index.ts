@@ -10,66 +10,8 @@ export const defaultThemeConfig: ThemeConfig = {
   avatar: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/avatar.jpg',
   favicon: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/favicon.jpg',
   domain: 'aurora.zmxlt.top',
-  defaultBgColor: '#cfd0f8',
-  pcBgImage: '/pc.png',
-  mobileBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
-  defaultPostCoverImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage%20.png',
-  defaultFriendAvatarImage: '/pc.png',
-  defaultFriendBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
-  menu: [
-    {
-      text: '首页',
-      link: '/',
-      quote: '',
-      icon: 'icon-index',
-    },
-    {
-      text: '归档',
-      link: '/archives/',
-      quote: '華枝春滿 天心月圓',
-      icon: 'icon-archives',
-    }, {
-      text: '分类',
-      link: '/categories/',
-      quote: '桜華月想 暮色蒼然',
-      icon: 'icon-categories',
-    },
-    {
-      text: '标签',
-      link: '/tags/',
-      quote: '灯笼流丽，百鬼夜行',
-      icon: 'icon-tags',
-    }, {
-      text: '书单',
-      link: '/books/',
-      quote: '追想風景 彼岸帰航',
-      icon: 'icon-books',
-    },
-    {
-      text: '灵感',
-      link: '/inspirations/',
-      quote: '詠奏妖華，明鏡止水',
-      icon: 'icon-inspiration',
-    }, {
-      text: '友链',
-      link: '/friends/',
-      quote: '青青子衿，悠悠我心',
-      icon: 'icon-friends',
-    },
-    {
-      text: '关于',
-      link: '/about/',
-      quote: '蝉鸣如雨，花宵道中',
-      icon: 'icon-about',
-    },
-  ],
-  footer: {
-    since: 2022,
-    title: '椎咲良田',
-    subtitle: '快走吧 趁风停止之前',
-    themeName: 'valaxy-theme-aurora',
-    themeAddress: 'https://github.com/zmxlt/valaxy-theme-aurora',
-  },
+  defaultSiteBgColor: '#cfd0f8',
+  defaultSiteColor: '#b854d4',
   themeColors: [
     '#B28FCE', // 薄
     '#86C166', // 苗
@@ -84,4 +26,84 @@ export const defaultThemeConfig: ThemeConfig = {
     '#867835', // 黄海松茶
     '#B9887D', // 水がき
   ],
+  siteBgImage: '/pc.png',
+  defaultPostCoverImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage%20.png',
+  defaultFriendAvatarImage: '/pc.png',
+  defaultFriendBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
+  defaultErrorImage: '/pc.png',
+
+  /**
+   *
+   *  图标 remix icon 图标
+   * https://remixicon.com/
+   * https://github.com/Remix-Design/RemixIcon
+   *
+   */
+  iconStyle: {
+    href: 'https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css',
+    postCalendar: 'ri-calendar-2-line',
+    postCategory: 'ri-bookmark-line',
+    postTag: 'ri-price-tag-3-line',
+    quoteLeft: 'ri-double-quotes-l',
+    quoteRight: 'ri-double-quotes-r',
+    footerCopyright: 'ri-copyright-line',
+    footerTitle: 'ri-heart-2-line',
+    bookRecIndex: 'ri-star-fill',
+  },
+  menu: [
+    {
+      text: '首页',
+      href: '/',
+      quote: '',
+      icon: 'ri-home-3-line',
+    },
+    {
+      text: '归档',
+      href: '/archives/',
+      quote: '華枝春滿 天心月圓',
+      icon: 'ri-archive-line',
+    }, {
+      text: '分类',
+      href: '/categories/',
+      quote: '桜華月想 暮色蒼然',
+      icon: 'ri-bookmark-line',
+    },
+    {
+      text: '标签',
+      href: '/tags/',
+      quote: '灯笼流丽，百鬼夜行',
+      icon: 'ri-price-tag-3-line',
+    }, {
+      text: '书单',
+      href: '/books/',
+      quote: '追想風景 彼岸帰航',
+      icon: 'ri-book-open-line',
+    },
+    {
+      text: '灵感',
+      href: '/inspirations/',
+      quote: '詠奏妖華，明鏡止水',
+      icon: 'ri-quill-pen-line',
+    }, {
+      text: '友链',
+      href: '/friends/',
+      quote: '青青子衿，悠悠我心',
+      icon: 'ri-heart-3-line',
+    },
+    {
+      text: '关于',
+      href: '/about/',
+      quote: '蝉鸣如雨，花宵道中',
+      icon: 'ri-centos-line',
+    },
+  ],
+  footer: {
+    beian: {
+      enable: true,
+      icp: '苏ICP备17038157号',
+    },
+    since: 2022,
+    title: '椎咲良田',
+    powered: true,
+  },
 }
