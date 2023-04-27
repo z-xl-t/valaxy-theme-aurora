@@ -1,5 +1,9 @@
+<script setup lang="ts">
+defineProps<{ page: string }>()
+</script>
+
 <template>
-  <AuroraPage />
+  <AuroraPage :cur-page="parseInt(page)" />
 </template>
 
 <route lang="yaml">
