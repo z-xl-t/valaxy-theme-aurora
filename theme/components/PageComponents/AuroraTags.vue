@@ -40,8 +40,6 @@ function backTags() {
   <div class="tags">
     <AuroraQuote :quote="quote" />
     <AuroraTag :tags="tags" />
-  </div>
-  <div class="post-collapse-container" :class="{ show: curTag, hidden: !curTag }">
     <AuroraPostCollapse :title="curTag" :posts="posts" :back="backTags" />
   </div>
 </template>

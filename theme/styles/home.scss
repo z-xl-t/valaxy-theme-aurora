@@ -179,7 +179,8 @@
       }
 
       .post-link {
-        @include fillParent(absolute, $zIndex-1)
+        @include fillParent(absolute, $zIndex-1);
+        bottom: 50px;
       }
     }
   }
