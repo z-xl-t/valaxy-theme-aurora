@@ -1,15 +1,9 @@
 import type { ThemeConfig } from '../types'
 
-/**
- * Default Config
- */
 export const defaultThemeConfig: ThemeConfig = {
   title: '椎咲良田',
   subtitle: '快走吧, 趁风停止之前',
   author: '椎咲良田',
-  avatar: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/avatar.jpg',
-  favicon: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/favicon.jpg',
-  domain: 'aurora.zmxlt.top',
   defaultSiteBgColor: '#cfd0f8',
   defaultSiteColor: '#b854d4',
   themeColors: [
@@ -30,7 +24,6 @@ export const defaultThemeConfig: ThemeConfig = {
   defaultPostCoverImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage%20.png',
   defaultFriendAvatarImage: '/pc.png',
   defaultFriendBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
-  defaultErrorImage: '/pc.png',
 
   /**
    *
@@ -49,6 +42,8 @@ export const defaultThemeConfig: ThemeConfig = {
     footerCopyright: 'ri-copyright-line',
     footerTitle: 'ri-heart-2-line',
     bookRecIndex: 'ri-star-fill',
+    panelLeft: 'ri-arrow-drop-left-line',
+    panelRight: 'ri-arrow-drop-right-line',
   },
   menu: [
     {
@@ -105,5 +100,31 @@ export const defaultThemeConfig: ThemeConfig = {
     since: 2022,
     title: '椎咲良田',
     powered: true,
+  },
+  panel: {
+    enable: true,
+    panelIconImage: 'https://i.loli.net/2020/12/27/rPA2XaEJsnq5UIC.png',
+    panelTitle: '联系方式',
+    panelItems: [
+      {
+        desc: 'Q Q',
+        qrCodeImage: '/pc.png',
+      },
+      {
+        desc: '微信',
+        qrCodeImage: 'https://i.loli.net/2020/12/27/rPA2XaEJsnq5UIC.png',
+      },
+      {
+        desc: '蓝鸟',
+        qrCodeImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage%20.png',
+      }, {
+        desc: 'xx',
+        qrCodeImage: 'https://i.loli.net/2020/12/27/rPA2XaEJsnq5UIC.png',
+      },
+      {
+        desc: 'yy',
+        qrCodeImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage%20.png',
+      },
+    ],
   },
 }

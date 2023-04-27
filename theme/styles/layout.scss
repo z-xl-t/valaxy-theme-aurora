@@ -109,18 +109,30 @@ body,
   z-index: 999;
 }
 
-.pagination .prev.active,
-.pagination .next.active,
-.pagination .page-number {
 
-  &:hover {
-    background-color: var(--aurora-default-color) !important;
+.pagination {
+
+  .prev,
+  .next,
+  .span,
+  .page-number {
+
+    width: 40px !important;
+    height: 40px !important;
+    margin: 4px !important;
   }
-}
 
-.pagination .page-number.active {
+  .prev,
+  .next,
+  .page-number {
+    &:hover {
+      background-color: var(--aurora-default-bg-color) !important;
+    }
 
-  background-color: var(--aurora-default-bg-color) !important;
+    &.active {
+      background-color: var(--aurora-default-color) !important;
+    }
+  }
 }
 
 
@@ -168,7 +180,7 @@ body,
     }
   }
 
-  footer {
+  &>footer {
     min-height: 80px;
   }
 

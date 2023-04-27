@@ -5,9 +5,6 @@ export interface ThemeConfig {
   title: string
   subtitle?: string
   author: string
-  avatar?: string
-  favicon?: string
-  domain?: string
   defaultSiteBgColor?: string
   defaultSiteColor?: string
   siteBgImage?: string
@@ -15,7 +12,6 @@ export interface ThemeConfig {
   defaultPostCoverImage?: string
   defaultFriendAvatarImage?:string
   defaultFriendBgImage?: string
-  defaultErrorImage?: string
   iconStyle: {
     href: string
     postCalendar: string
@@ -26,6 +22,8 @@ export interface ThemeConfig {
     footerCopyright: string
     footerTitle: string
     bookRecIndex: string
+    panelLeft: string
+    panelRight: string
   }
   menu: Partial<Menu[]>
   footer: Partial<{
@@ -37,6 +35,12 @@ export interface ThemeConfig {
     title: string
     powered: boolean
   }>
+  panel: Partial<{
+    enable: boolean
+    panelIconImage: string,
+    panelTitle?: string,
+    panelItems?: PanelItem[]
+  }>
 }
 
 export interface Menu {
@@ -46,13 +50,16 @@ export interface Menu {
   icon?: string
 }
 
-
+export interface PanelItem {
+  desc: string
+  qrCodeImage: string
+}
 
 /**
  * friend link Type
  */
 
-export interface friendType {
+export interface FriendType {
   name: string
   siteUrl: string
   siteImg: string
@@ -62,7 +69,7 @@ export interface friendType {
 /**
  * inspiration Type
  */
-export interface inspirationType {
+export interface InspirationType {
   time: string
   moment: string
   imgUrl?: string
@@ -73,7 +80,7 @@ export interface inspirationType {
  * book type
  */
 
-export interface bookType {
+export interface BookType {
   name: string
   cover: string
   author: string

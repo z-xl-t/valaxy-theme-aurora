@@ -1,0 +1,268 @@
+@use '../vars.scss' as *;
+@use '../animation.scss' as *;
+@use '../mixin.scss' as *;
+
+.panel {
+  position: fixed;
+  right: 12px;
+  bottom: 12px;
+  width: 28px;
+  height: 28px;
+  z-index: 10;
+
+  @include sp-layout() {
+    display: none;
+  }
+
+  .img-container {
+    overflow: hidden;
+    animation: rotate 2s linear 0s infinite;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+
+    i {
+      font-size: 20px;
+    }
+  }
+
+  .panel-mask {
+    position: fixed;
+    z-index: $zIndex-2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .panel-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 100;
+    pointer-events: none;
+    perspective: 600px;
+    transform: translateY(-100%);
+
+    .wrapper {
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      will-change: transform;
+
+      .short-line,
+      .long-line {
+
+        position: absolute;
+        top: 0px;
+        left: 50%;
+        width: 600px;
+        height: calc(50% - 175px);
+        transform: translateX(-50%);
+
+        .line {
+          position: absolute;
+          width: 2px;
+          height: 150%;
+          background-color: $panel-color;
+        }
+      }
+
+      .short-line {
+        .line {
+          bottom: 0;
+
+          &:nth-child(1) {
+            left: 55px;
+          }
+
+          &:nth-child(2) {
+            right: 55px;
+          }
+        }
+      }
+
+      .long-line {
+        .line {
+          bottom: -25px;
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            left: -4px;
+            bottom: -4px;
+            width: 10px;
+            height: 10px;
+            background-color: $panel-color;
+            border-radius: 50%;
+          }
+
+          &:nth-child(1) {
+            left: 25px;
+          }
+
+          &:nth-child(2) {
+            right: 25px;
+          }
+        }
+      }
+
+      .swiper {
+        cursor: pointer;
+        pointer-events: all;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 600px;
+        text-align: center;
+        border-radius: 12px;
+        height: 350px;
+        background-color: white;
+        box-shadow: $bg-dark-dim 0px 0px 20px;
+        transform: translate(-50%, -50%);
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+
+        header {
+          width: 100%;
+          height: 50px;
+          font-size: 20px;
+          border-bottom: 1px solid $panel-color;
+          background-color: $panel-bg-color;
+          @include flexCenter();
+        }
+
+        main {
+          flex: 1;
+          width: 100%;
+          margin: 25px 0;
+
+          ul {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            overflow-x: scroll;
+            white-space: nowrap;
+
+            li {
+              height: 200px;
+              overflow: hidden;
+              flex-shrink: 0;
+              width: 50%;
+              @include flexColumnCenter();
+              justify-content: space-around;
+
+              h3 {
+                font-size: 18px;
+                font-weight: 400;
+                height: 30px;
+
+              }
+
+              img {
+                width: 150px;
+                height: 150px;
+                margin: auto;
+                margin: 0 auto;
+                max-width: 100%;
+                border-radius: 3px;
+                box-shadow: rgba(0, 0, 0, 0.2) 0 3px 3px;
+                border: 3px solid transparent;
+                transition: all 0.3s ease-out;
+                object-fit: cover;
+
+                &:hover {
+                  border-color: var(--aurora-default-bg-color);
+                }
+              }
+            }
+          }
+
+          .btn {
+            position: absolute;
+            top: 50%;
+            width: 66px;
+            height: 66px;
+            overflow: hidden;
+            font-size: 28px;
+            border-radius: 50%;
+            box-shadow: $bg-dark-dim 0px 0px 10px;
+            background-color: $panel-bg-color;
+            transition: color 0.3s ease-in-out;
+            @include flexCenter();
+
+            i[class*=icon] {
+              font-size: 50px;
+              color: var(--aurora-default-color);
+            }
+
+            &:hover {
+              background-color: var(--aurora-default-bg-color);
+            }
+          }
+
+          .prev {
+            left: 0;
+            transform: translate(-50%, -50%);
+          }
+
+          .next {
+            right: 0;
+
+            transform: translate(50%, -50%);
+          }
+        }
+
+        footer {
+          height: 50px;
+          border-top: 1px solid $panel-color;
+          background-color: $panel-bg-color;
+        }
+      }
+    }
+  }
+
+  &.show-panel {
+    .panel-mask {
+      background-color: rgba(255, 255, 255, 0.5);
+      display: block;
+    }
+
+    .panel-container {
+      display: block;
+      transform: translateY(0);
+      will-change: transform;
+      animation: 0.9s ease-out 0s 1 normal forwards running dropDown;
+
+      .wrapper {
+        will-change: transform;
+        animation: 3s ease-out 0s 1 normal forwards running dropWave;
+      }
+    }
+
+
+  }
+
+  &.hidden-panel {
+
+    .panel-mask {
+      display: none;
+    }
+
+    .panel-container {
+      display: none;
+    }
+  }
+}

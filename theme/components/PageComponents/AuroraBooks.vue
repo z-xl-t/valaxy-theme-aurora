@@ -2,7 +2,7 @@
 import { useRoute } from 'vue-router'
 import { useFrontmatter, useThemeConfig } from 'valaxy'
 import { getMenuQuote } from '../../utils'
-import type { bookType } from '../../types'
+import type { BookType } from '../../types'
 import { useFetchData } from '../../composables'
 
 const themeConfig = useThemeConfig()
@@ -10,7 +10,7 @@ const frontmatter = useFrontmatter()
 const iconRecIndex = themeConfig.value.iconStyle.bookRecIndex
 const pathName = useRoute().name
 const quote = getMenuQuote(themeConfig.value.menu, pathName)
-const data = typeof (frontmatter.value.books) === 'string' ? useFetchData<bookType>(frontmatter.value.books) : frontmatter.value.books as bookType[]
+const data = typeof (frontmatter.value.books) === 'string' ? useFetchData<BookType>(frontmatter.value.books) : frontmatter.value.books as BookType[]
 </script>
 
 <template>

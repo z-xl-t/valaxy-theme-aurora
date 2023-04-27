@@ -18,6 +18,10 @@
     &>* {
       margin-right: 2px;
     }
+
+    i[class*=icon-] {
+      color: var(--aurora-default-color);
+    }
   }
 
   .powered {

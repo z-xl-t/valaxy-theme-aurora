@@ -3,12 +3,12 @@ import { useFrontmatter, useThemeConfig } from 'valaxy'
 import { useRoute } from 'vue-router'
 import { useFetchData } from '../../composables'
 import { getMenuQuote, getRandomColorArr } from '../../utils'
-import type { inspirationType } from '../../types'
+import type { InspirationType } from '../../types'
 
 const themeConfig = useThemeConfig()
 
 const frontmatter = useFrontmatter()
-const data = typeof (frontmatter.value.inspirations) === 'string' ? useFetchData<inspirationType>(frontmatter.value.inspirations) : frontmatter.value.inspirations as inspirationType[]
+const data = typeof (frontmatter.value.inspirations) === 'string' ? useFetchData<InspirationType>(frontmatter.value.inspirations) : frontmatter.value.inspirations as InspirationType[]
 
 const themeColors = themeConfig.value?.themeColors || []
 const introductionLength = data.length
