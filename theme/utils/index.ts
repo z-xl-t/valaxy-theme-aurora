@@ -1,5 +1,6 @@
 import type { Tags } from 'valaxy'
 import type { Menu } from '../types'
+
 /**
  * set default img
  * @param e
@@ -48,9 +49,4 @@ export function getTagStyleMap(tags: Tags, colorArr: string[]) {
     i++
   })
   return tagStyleMap
-}
-
-export function smoothScrollToSelector(selector: string) {
-  const element = document.querySelector(selector)
-  element?.scrollIntoView({ behavior: 'smooth' })
 }

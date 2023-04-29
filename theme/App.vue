@@ -2,6 +2,7 @@
 import { useHead } from '@vueuse/head'
 import { computed } from 'vue'
 import { useThemeConfig } from 'valaxy'
+import { useCssVar } from '@vueuse/core'
 
 const themeConfig = useThemeConfig()
 const iconHref = themeConfig.value.iconStyle.href
@@ -20,12 +21,10 @@ useHead({
   ],
 })
 
-// 获取 #app 节点
-const app = document.querySelector('#app') as HTMLElement
-
-// 将 css 变量注入
-app?.style.setProperty('--aurora-default-bg-color', defaultSiteBgColor.value)
-app?.style.setProperty('--aurora-default-color', defaultSiteColor.value)
+const bgColor = useCssVar('--aurora-default-bg-color')
+bgColor.value = defaultSiteBgColor.value
+const color = useCssVar('--aurora-default-color')
+color.value = defaultSiteColor.value
 </script>
 
 <template>
