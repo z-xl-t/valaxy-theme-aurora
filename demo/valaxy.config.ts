@@ -1,6 +1,7 @@
 import { defineValaxyConfig } from 'valaxy'
 import type { ThemeConfig } from 'valaxy-theme-aurora'
 import { addonWaline } from 'valaxy-addon-waline'
+
 /**
  * User Config
  * do not use export const config to avoid defu conflict

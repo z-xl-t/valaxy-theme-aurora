@@ -1,4 +1,5 @@
 import type { Tags } from 'valaxy'
+import { isClient } from '@vueuse/core'
 import type { Menu } from '../types'
 
 /**
@@ -49,4 +50,11 @@ export function getTagStyleMap(tags: Tags, colorArr: string[]) {
     i++
   })
   return tagStyleMap
+}
+
+export function smoothScrollToSelector(selector: string) {
+  if (isClient) {
+    const element = document.querySelector(selector)
+    element?.scrollIntoView({ behavior: 'smooth' })
+  }
 }
