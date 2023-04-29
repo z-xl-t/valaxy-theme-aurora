@@ -21,6 +21,7 @@
     "dayjs": "^1.11.7"
   },
   "devDependencies": {
-    "valaxy": "v0.14.27"
+    "valaxy": "^v0.14.27",
+    "valaxy-addon-waline": "^0.1.0"
   }
 }

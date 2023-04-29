@@ -9,12 +9,7 @@
   align-items: center;
   position: relative;
 
-  @include pc-layout() {
-    padding: 50px 0;
-  }
-
   @include sp-layout() {
-    padding-top: 20px;
     justify-content: space-between;
     background-color: $bg-dark;
     box-shadow: 0 0 10px $bg-dark-dim inset;

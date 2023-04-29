@@ -1,0 +1,143 @@
+@use '../vars.scss' as *;
+@use '../animation.scss' as *;
+@use '../mixin.scss' as *;
+
+.comment {
+  padding: 16px;
+  @include card-page();
+
+  @include sp-layout() {
+    color: var(--aurora-default-color);
+    background-color: rgba(255, 255, 255, 0.65);
+
+    &::before {
+      content: '';
+      display: block;
+      background-color: var(--aurora-default-bg-color);
+      width: 100%;
+      height: 2px;
+    }
+
+    .waline {
+      padding-top: 16px;
+    }
+  }
+
+
+
+  .waline {
+    padding: 16px;
+
+    .wl-comment {
+      .wl-login-info {
+        .wl-login-nick {
+          color: var(--aurora-default-color);
+        }
+
+        .wl-logout-btn {
+          .wl-close-icon path:nth-of-type(2) {
+            fill: var(--aurora-default-color) !important;
+          }
+        }
+      }
+
+      .wl-footer {
+        .wl-info {
+          .wl-btn {
+
+            border: 1px solid transparent !important;
+            background-color: var(--aurora-default-bg-color) !important;
+            color: black !important;
+
+            &:hover {
+              border: 1px solid var(--aurora-default-color) !important;
+            }
+          }
+        }
+      }
+    }
+
+    .wl-meta-head {
+      .wl-num {
+        color: var(--aurora-default-color) !important;
+      }
+
+      .wl-sort {
+        &>.active {
+          color: var(--aurora-default-color) !important;
+        }
+      }
+    }
+
+    .wl-cards {
+      .wl-badge {
+        color: var(--aurora-default-color) !important;
+        border-color: var(--aurora-default-color) !important;
+      }
+
+      .wl-user {
+        .verified-icon {
+          path {
+            fill: var(--aurora-default-color) !important;
+          }
+        }
+      }
+
+      .wl-content {
+        user-select: text !important;
+      }
+
+      .wl-comment-actions {
+        &>* {
+          margin: 0 4px;
+
+          &:hover {
+            color: var(--aurora-default-bg-color) !important;
+          }
+        }
+
+        .wl-delete {
+          svg path {
+            fill: var(--aurora-default-color) !important;
+          }
+        }
+
+        .wl-like {
+          svg path {
+            fill: var(--aurora-default-color) !important;
+          }
+        }
+      }
+
+      .wl-admin-actions {
+        .wl-btn {
+          &:hover {
+            color: var(--aurora-default-color);
+            border-color: var(--aurora-default-bg-color);
+          }
+
+        }
+      }
+    }
+
+    .wl-operation {
+      .wl-btn {
+        border: 1px solid transparent !important;
+        background-color: var(--aurora-default-bg-color) !important;
+        color: black !important;
+
+        &:hover {
+          border: 1px solid var(--aurora-default-color) !important;
+        }
+      }
+    }
+
+    .wl-power {
+      a {
+        color: var(--aurora-default-color) !important;
+      }
+    }
+
+
+  }
+}

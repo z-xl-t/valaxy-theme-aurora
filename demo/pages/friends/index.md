@@ -1,6 +1,7 @@
 ---
 title: 友链
 layout: friends
+comment: true
 description: 云游的小伙伴们
 links:
   - name: 蝉時雨

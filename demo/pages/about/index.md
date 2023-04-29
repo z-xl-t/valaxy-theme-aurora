@@ -1,6 +1,7 @@
 ---
 title: 关于
 layout: about
+comment: true
 info:
   avatar: /avatar.jpg
   name: 椎咲良田

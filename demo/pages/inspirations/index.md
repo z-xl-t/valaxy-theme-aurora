@@ -1,6 +1,7 @@
 ---
 title: 灵感
 layout: inspirations
+comment: true
 inspirations:
   - time: '2019年11月15日'
     moment: '文字+图片'

@@ -2,12 +2,6 @@
 @use './animation.scss' as *;
 @use './mixin.scss' as *;
 
-
-.markdown {
-  padding: 20px;
-}
-
-.markdown,
 .markdown-body {
   text-align: justify;
   font-size: $font-size-normal;

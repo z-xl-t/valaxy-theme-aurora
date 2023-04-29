@@ -4,8 +4,7 @@
 
 .post {
   @include card();
-  width: 99%;
-  margin: 0 auto;
+  width: 100%;
   position: relative;
   overflow: unset;
 
@@ -89,5 +88,9 @@
         }
       }
     }
+  }
+
+  .markdown {
+    padding: 20px;
   }
 }

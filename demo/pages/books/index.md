@@ -1,6 +1,7 @@
 ---
 title: 书单
 layout: books
+comment: true
 books:
   - name: '奇诺之旅(系列丛书)'
     cover: '/pc.png'

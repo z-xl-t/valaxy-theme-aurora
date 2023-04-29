@@ -13,6 +13,9 @@ const panelFlag = themeConfig.value?.panel.enable || false
         <slot name="main-content" />
       </div>
     </main>
+    <div class="main-comment">
+      <slot name="main-comment" />
+    </div>
     <AuroraFooter />
     <AuroraPanel v-if="panelFlag" />
     <AuroraBg />
