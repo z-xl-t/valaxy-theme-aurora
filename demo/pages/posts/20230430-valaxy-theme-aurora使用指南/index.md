@@ -12,9 +12,9 @@ date: 2023-04-30 08:00:00 +8
 
 valaxy-theme-aurora 是一款基于 [valaxy](https://valaxy.site/guide/getting-started) 的静态博客主题， 是[ aurora-vue](https://github.com/chanshiyucx/aurora) 主题的移植版本，本人只是做了一点小小的工作。
 
-本人并没有做到完全复刻原主题，而是移植出一个最小可用的主题版本。此处引用罗先生的经典名言。
+本人并没有做到完全复刻原主题，而是移植出一个最小可用的主题版本。此处引用罗先生的经典名言：又不是不能用。
 
-[](./0.png)
+![](./0.png)
 
 ## 安装 nodejs
 
