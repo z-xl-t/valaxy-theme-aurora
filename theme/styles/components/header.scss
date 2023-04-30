@@ -22,19 +22,10 @@
     font-weight: 400;
     letter-spacing: 4px;
 
-    @include pc-layout() {
 
-      animation: fadeInDown 0.5s ease-out forwards;
-    }
-
-    @include sp-layout() {
-
-      animation: fadeInDown 0.5s ease-out forwards;
-    }
   }
 
   .title {
-    transition: color 0.3s ease-out;
 
     @include pc-layout() {
       font-size: 38px;
@@ -81,8 +72,6 @@
 
     background-color: $bg-dark;
     box-shadow: 0 0 10px $bg-dark-dim inset;
-    transition: all 0.5s ease;
-    animation: fadeIn 0.5s ease-out;
 
     @include pc-layout() {
       padding: 0 32px;
@@ -101,7 +90,6 @@
     .menu-item {
       color: $text-color;
       width: 50px;
-      transition: color 0.3s ease;
 
       @include pc-layout() {
         font-size: $font-size-large;
