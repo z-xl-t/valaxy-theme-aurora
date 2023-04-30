@@ -1,11 +1,11 @@
 <script lang="ts" setup>
 import { useThemeConfig } from '../../composables'
-import type { Menu } from '../../types'
+import type { MenuType } from '../../types'
 
 const themeConfig = useThemeConfig()
 const title = themeConfig.value.title || ''
 const subtitle = themeConfig.value.subtitle || ''
-const menu = (themeConfig.value.menu || []) as Menu[]
+const menu = (themeConfig.value.menu || []) as MenuType[]
 </script>
 
 <template>

@@ -12,20 +12,8 @@ export interface ThemeConfig {
   defaultPostCoverImage?: string
   defaultFriendAvatarImage?:string
   defaultFriendBgImage?: string
-  iconStyle: {
-    href: string
-    postCalendar: string
-    postCategory: string
-    postTag: string
-    quoteLeft: string
-    quoteRight: string
-    footerCopyright: string
-    footerTitle: string
-    bookRecIndex: string
-    panelLeft: string
-    panelRight: string
-  }
-  menu: Partial<Menu[]>
+  iconStyle: iconStyleType
+  menu: Partial<MenuType[]>
   footer: Partial<{
     beian?: {
       enable: boolean
@@ -39,18 +27,38 @@ export interface ThemeConfig {
     enable: boolean
     panelIconImage: string,
     panelTitle?: string,
-    panelItems?: PanelItem[]
+    panelItems?: PanelItemType[]
   }>
 }
 
-export interface Menu {
+export interface iconStyleType {
+  href: string
+  postCalendar: string
+  postCategory: string
+  postTag: string
+  quoteLeft: string
+  quoteRight: string
+  footerCopyright: string
+  footerTitle: string
+  bookRecIndex: string
+  panelLeft: string
+  panelRight: string
+  h1: string
+  h2: string
+  h3: string
+  h4: string
+  h5: string
+  h6: string
+}
+
+export interface MenuType {
   text: string
   href: string
   quote: string
   icon?: string
 }
 
-export interface PanelItem {
+export interface PanelItemType {
   desc: string
   qrCodeImage: string
 }

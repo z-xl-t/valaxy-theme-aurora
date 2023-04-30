@@ -25,6 +25,6 @@ books:
     description: '人的一生中，为了能有所得，其中最不可或缺的是什么呢？老师认为是‘信念’——‘努力做到自己决定的、自己想做的事情的力量’才是最重要。'
     recommendIndex: 5
 # 支持使用 json 数据链接
-# links: https://domain/books.json
+# books: https://domain/books.json
 ---
 

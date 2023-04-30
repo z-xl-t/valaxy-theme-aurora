@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
-import type { PanelItem } from 'types'
+import type { PanelItemType } from 'types'
 import { useThemeConfig } from '../../composables'
 
 const themeConfig = useThemeConfig()
@@ -8,7 +8,7 @@ const panel = themeConfig.value.panel || {}
 
 const panelIconImage = panel.panelIconImage || ''
 const panelTitle = panel.panelTitle || ''
-const panelItems = panel.panelItems || [] as PanelItem[]
+const panelItems = panel.panelItems || [] as PanelItemType[]
 const panelItemsLength = panelItems.length
 const panelLeftIcon = themeConfig.value.iconStyle.panelLeft || ''
 const panelRightIcon = themeConfig.value.iconStyle.panelRight || ''

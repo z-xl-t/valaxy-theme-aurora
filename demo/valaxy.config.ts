@@ -52,6 +52,12 @@ export default defineValaxyConfig<ThemeConfig>({
       bookRecIndex: 'ri-star-fill',
       panelLeft: 'ri-arrow-drop-left-line',
       panelRight: 'ri-arrow-drop-right-line',
+      h1: 'ri-star-line',
+      h2: 'ri-gift-line',
+      h3: 'ri-leaf-line',
+      h4: 'ri-leaf-line',
+      h5: 'ri-leaf-line',
+      h6: 'ri-leaf-line',
     },
     menu: [
       {

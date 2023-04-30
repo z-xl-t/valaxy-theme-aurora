@@ -1,0 +1,13 @@
+@use './vars.scss' as *;
+@use './animation.scss' as *;
+@use './mixin.scss' as *;
+
+.not-found {
+  flex: 1;
+  @include card-page();
+  @include flexCenter();
+
+  h1 {
+    font-size: 40px;
+  }
+}
