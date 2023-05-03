@@ -132,14 +132,10 @@
     }
   }
 
-  ol {
-    margin: 16px 16px 16px 32px;
-  }
-
-
-
   ol,
   ul {
+    margin: 16px;
+
     li {
       list-style: auto;
 
@@ -152,7 +148,7 @@
       }
 
       ul {
-        margin-left: 32px;
+        margin-left: 16px;
       }
     }
   }
