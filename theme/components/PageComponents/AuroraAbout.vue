@@ -24,19 +24,15 @@ const quote = getMenuQuote(themeConfig.value.menu, pathName)
 
       <div class="info">
         <span v-if="frontmatter.info.name">
-          <i class="icon icon-fort-awesome" />
           <span>{{ frontmatter.info.name }}</span>
         </span>
         <span v-if="frontmatter.info.sign">
-          <i class="icon icon-fort-awesome" />
           <span>{{ frontmatter.info.sign }}</span>
         </span>
         <span v-if="frontmatter.info.graduation">
-          <i class="icon icon-fort-awesome" />
           <span>{{ frontmatter.info.graduation }}</span>
         </span>
         <span v-if="frontmatter.info.profession">
-          <i class="icon icon-fort-awesome" />
           <span>{{ frontmatter.info.profession }}</span>
         </span>
       </div>
