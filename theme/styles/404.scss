@@ -8,6 +8,13 @@
   @include flexCenter();
 
   h1 {
-    font-size: 40px;
+    @include pc-layout(){
+      
+    font-size: 32px;
+    }
+
+    @include sp-layout() {
+      font-size: 18px;
+    }
   }
 }
