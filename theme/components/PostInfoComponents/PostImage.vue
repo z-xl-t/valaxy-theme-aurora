@@ -10,6 +10,8 @@ const defaultPostCoverImage = themeConfig.value.defaultPostCoverImage || ''
 </script>
 
 <template>
-  <img class="default-image" :src="defaultPostCoverImage" alt="default-post-image">
-  <img v-if="imageUrl" class="post-image" :src="imageUrl" alt="post-image">
+  <div class="post-image">
+    <img v-if="imageUrl" class="post-image" :src="imageUrl">
+    <img v-else class="default-image" :src="defaultPostCoverImage">
+  </div>
 </template>

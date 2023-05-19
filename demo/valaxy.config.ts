@@ -29,9 +29,9 @@ export default defineValaxyConfig<ThemeConfig>({
       '#B9887D', // 水がき
     ],
     siteBgImage: '/pc.png',
-    defaultPostCoverImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/postDefaultImage%20.png',
+    defaultPostCoverImage: '/pc.png',
     defaultFriendAvatarImage: '/pc.png',
-    defaultFriendBgImage: 'https://cdn.jsdelivr.net/gh/sanshiliuxiao/blog-static/mobile.png',
+    defaultFriendBgImage: '/pc.png',
 
     /**
      *

@@ -17,17 +17,13 @@
     .post-header {
       position: relative;
       overflow: hidden;
-      min-height: 50px;
-
+      height: auto;
+      
+      background-color: var(--aurora-default-bg-color);
       .post-image {
-        position: absolute;
-        left: 0;
-        top: 0;
         width: 100%;
-        height: 100%;
-        object-fit: cover;
+        height: 480px;
       }
-
     }
 
     .post-meta-wrapper {
