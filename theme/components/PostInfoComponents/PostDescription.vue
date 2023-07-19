@@ -5,7 +5,7 @@ defineProps<{
 </script>
 
 <template>
-  <div v-if="description" class="post-description">
+  <div class="post-description">
     <p><span>{{ description }}</span></p>
   </div>
 </template>
