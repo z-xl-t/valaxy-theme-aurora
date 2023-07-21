@@ -168,6 +168,7 @@
 
   strong {
     font-weight: $font-weight-bold;
+    color: var(--aurora-default-color);
   }
 
   a {
@@ -201,7 +202,7 @@
 
   img {
     border-radius: 3px;
-
+    margin: 16px auto;
     box-shadow: $card-shadow;
     transition: all 0.3s ease-out, opacity 0.8s ease-out;
     border: 6px solid transparent;

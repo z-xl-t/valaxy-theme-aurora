@@ -9,7 +9,7 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "valaxy": "0.14.40",
+    "valaxy": "^0.14.40",
     "valaxy-theme-aurora": "workspace:*"
   },
   "devDependencies": {
