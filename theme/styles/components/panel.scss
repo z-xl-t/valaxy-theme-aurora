@@ -1,6 +1,6 @@
-@use '../vars.scss' as *;
-@use '../animation.scss' as *;
-@use '../mixin.scss' as *;
+@use "../vars.scss" as *;
+@use "../animation.scss" as *;
+@use "../mixin.scss" as *;
 
 .panel {
   position: fixed;
@@ -60,7 +60,6 @@
 
       .short-line,
       .long-line {
-
         position: absolute;
         top: 0px;
         left: 50%;
@@ -95,7 +94,7 @@
           bottom: -25px;
 
           &::after {
-            content: '';
+            content: "";
             display: block;
             position: absolute;
             left: -4px;
@@ -155,7 +154,12 @@
             align-items: center;
             overflow-x: scroll;
             white-space: nowrap;
-
+            &:only-child  {
+              justify-content: center;
+            }
+            &:not(:only-child) {
+              justify-content: initial;
+            }
             li {
               height: 200px;
               overflow: hidden;
@@ -168,7 +172,6 @@
                 font-size: 18px;
                 font-weight: 400;
                 height: 30px;
-
               }
 
               img {
@@ -203,7 +206,7 @@
             transition: color 0.3s ease-in-out;
             @include flexCenter();
 
-            i[class*=icon] {
+            i[class*="icon"] {
               font-size: 50px;
               color: var(--aurora-default-color);
             }
@@ -211,8 +214,7 @@
             &:hover {
               background-color: var(--aurora-default-color);
 
-              i[class*=icon] {
-
+              i[class*="icon"] {
                 color: rgba(255, 255, 255, 0.5);
               }
             }
@@ -233,7 +235,7 @@
         footer {
           height: 50px;
           border-top: 1px solid var(--aurora-default-color);
-          background-color: var(--aurora-default-bg-color)
+          background-color: var(--aurora-default-bg-color);
         }
       }
     }
@@ -256,12 +258,9 @@
         animation: 3s ease-out 0s 1 normal forwards running dropWave;
       }
     }
-
-
   }
 
   &.hidden-panel {
-
     .panel-mask {
       display: none;
     }
