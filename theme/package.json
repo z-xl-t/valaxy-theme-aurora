@@ -1,14 +1,14 @@
 {
   "name": "valaxy-theme-aurora",
-  "version": "0.1.8",
+  "version": "0.1.10",
   "packageManager": "pnpm@7.5.0",
   "author": {
     "email": "sanshiliuxiao@foxmail.com",
-    "name": "zmxlt",
-    "url": "https://zmxlt.top"
+    "name": "z-xl-t",
+    "url": "https://z-xl-t.top"
   },
-  "homepage": "https://aurora.zmxlt.top",
-  "repository": "https://github.com/zmxlt/valaxy-theme-aurora",
+  "homepage": "https://aurora.z-xl-t.top",
+  "repository": "https://github.com/z-xl-t/valaxy-theme-aurora",
   "keywords": [
     "valaxy",
     "theme",
