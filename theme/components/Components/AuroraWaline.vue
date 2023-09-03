@@ -5,9 +5,11 @@ const addon = useAddonWaline()
 </script>
 
 <template>
-  <div class="comment">
-    <div class="waline">
-      <WalineClient w="full" :options="addon.options" />
+  <div v-if="addon.options?.comment">
+    <div class="comment">
+      <div class="waline">
+        <WalineClient w="full" :options="addon.options" />
+      </div>
     </div>
   </div>
 </template>
