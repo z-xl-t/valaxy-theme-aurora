@@ -6,9 +6,9 @@ Valaxy-Theme-Aurora<sup><em>(vue)</em></sup>
 
 **Currently under development, no documentation available for use**
 
-[Sample Site](https://aurora.zmxlt.top)
+[Sample Site](https://aurora.z-xl-t.top/)
 
-[Valaxy-Theme-Aurora Tutorial](https://aurora.zmxlt.top/posts/20230430-valaxy-theme-aurora-tutorial)
+[Valaxy-Theme-Aurora Tutorial](https://aurora.z-xl-t.top/posts/20230430-valaxy-theme-aurora-tutorial)
 
 ### Development
 
