@@ -1,8 +1,4 @@
 <script setup lang="ts">
-import { useFrontmatter } from 'valaxy'
-
-const frontmatter = useFrontmatter()
-const comment = frontmatter.value.comment || false
 </script>
 
 <template>
@@ -10,9 +6,6 @@ const comment = frontmatter.value.comment || false
     <template #main-content>
       <AuroraCategories />
       <router-view />
-    </template>
-    <template #main-comment>
-      <AuroraWaline v-if="comment" />
     </template>
   </Layout>
 </template>

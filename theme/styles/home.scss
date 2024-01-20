@@ -68,10 +68,12 @@
           overflow: hidden;
           height: 240px;
           background-color: var(--aurora-default-bg-color);
+
           .post-image {
             width: 100%;
             height: 100%;
           }
+
           .post-title {
             display: flex;
             justify-content: space-between;
