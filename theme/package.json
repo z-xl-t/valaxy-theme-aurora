@@ -1,6 +1,6 @@
 {
   "name": "valaxy-theme-aurora",
-  "version": "0.1.11",
+  "version": "0.1.10",
   "packageManager": "pnpm@7.5.0",
   "author": {
     "email": "sanshiliuxiao@foxmail.com",
@@ -21,6 +21,6 @@
     "dayjs": "^1.11.7"
   },
   "devDependencies": {
-    "valaxy": "^v0.16.4"
+    "valaxy": "^0.14.40"
   }
 }
