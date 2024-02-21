@@ -1,7 +1,7 @@
 ---
-title: "valaxy-theme-aurora使用指南"
+title: "bbb"
 tags: [valaxy, aurora]
-categories: [使用指南, v-2]
+categories: [bbb]
 imageUrl: 'https://i.loli.net/2020/06/30/iGW3CIPSUZas4Yx.jpg'
 description: '这是 valaxy-theme-aurora 主题的使用指南'
 comment: true

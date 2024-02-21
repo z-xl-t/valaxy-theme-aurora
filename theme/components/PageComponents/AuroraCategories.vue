@@ -9,6 +9,7 @@ const pathName = useRoute().name
 const quote = getMenuQuote(themeConfig.value.menu, pathName)
 const site = useSiteStore()
 const categoryAll = useCategories().value.children
+
 const collapsable = ref(true)
 const level = ref(0)
 
@@ -46,8 +47,8 @@ function backCategory() {
     <AuroraQuote :quote="quote" />
     <ul v-for="(category, i) in categoryAll" :key="i" class="category-list">
       <AuroraCategory
-        :parent-key="category.name"
-        :category="category"
+        :parent-key="category[1].name"
+        :category="category[1]"
         :level="level + 1"
         :collapsable="collapsable"
       />

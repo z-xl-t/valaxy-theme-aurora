@@ -27,7 +27,7 @@ function jumpToDisplayCategory(category: string) {
 
 const postItems = ref<Partial<PostFrontMatter>[]>([])
 const subCategories = ref<Category[]>([])
-props?.category?.children.forEach((item) => {
+props?.category.children.forEach((item) => {
   const i = item as Category
   if (i.children)
     subCategories.value.push(i)

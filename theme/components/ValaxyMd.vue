@@ -1,8 +1,7 @@
 <script lang="ts" setup>
-import type { Ref } from 'vue'
-import { inject, onMounted, ref } from 'vue'
+import { onMounted, onUpdated, ref } from 'vue'
 
-import { useCopyCode, useMediumZoom, useThemeConfig, wrapTable } from 'valaxy'
+import { onContentUpdated, runContentUpdated, useCopyCode, useMediumZoom, useThemeConfig, wrapTable } from 'valaxy'
 import type { Post } from 'valaxy'
 import { setMarkdownBlockquote, setMarkdownHx } from '../composables'
 
@@ -13,24 +12,25 @@ defineProps<{
 
 const themeConfig = useThemeConfig().value || {}
 const iconStyle = themeConfig.iconStyle || {}
-const onContentUpdated = inject('onContentUpdated') as Ref<() => void>
 const content = ref()
-function updateDom() {
+onContentUpdated(() => {
   wrapTable(content.value)
   setMarkdownBlockquote(content.value, iconStyle)
   setMarkdownHx(content.value, iconStyle)
-  onContentUpdated.value?.()
-}
+})
 onMounted(() => {
-  updateDom()
+  runContentUpdated()
 })
 
+onUpdated(() => {
+  runContentUpdated()
+})
 useCopyCode()
 useMediumZoom()
 </script>
 
 <template>
   <article v-if="$slots.default" :class="frontmatter.markdown !== false && 'markdown-body'">
-    <slot ref="content" @vnode-updated="updateDom" />
+    <slot ref="content" @vue:updated="runContentUpdated" />
   </article>
 </template>
