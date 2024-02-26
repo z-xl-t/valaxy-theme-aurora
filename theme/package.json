@@ -21,6 +21,6 @@
     "dayjs": "^1.11.7"
   },
   "devDependencies": {
-    "valaxy": "^0.18.1"
+    "valaxy": "^0.18.5"
   }
 }
