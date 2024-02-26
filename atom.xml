@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://aurora.zmxlt.top/</id>
+    <title>Aurora 主题</title>
+    <updated>2024-02-26T07:04:19.488Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <author>
+        <name>VALAXY Developer</name>
+        <email>i@valaxy.site</email>
+        <uri>https://valaxy.site</uri>
+    </author>
+    <link rel="alternate" href="https://aurora.zmxlt.top/"/>
+    <link rel="self" href="https://aurora.zmxlt.top/atom.xml"/>
+    <subtitle>Aurora 主题的描述</subtitle>
+    <logo>https://valaxy.site/valaxy-logo.png</logo>
+    <icon>https://aurora.zmxlt.top/favicon.svg</icon>
+    <rights>CC BY-NC-SA 4.0 2024 © VALAXY Developer</rights>
+    <entry>
+        <title type="html"><![CDATA[valaxy-theme-aurora使用指南]]></title>
+        <id>https://aurora.zmxlt.top/posts/20230430-valaxy-theme-aurora-tutorial/index</id>
+        <link href="https://aurora.zmxlt.top/posts/20230430-valaxy-theme-aurora-tutorial/index"/>
+        <updated>2023-05-02T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[这是 valaxy-theme-aurora 主题的使用指南]]></summary>
+        <content type="html"><![CDATA[<h2>写在前面</h2>
+<p><a href="https://github.com/zmxlt/valaxy-theme-aurora">valaxy-theme-aurora</a> 是一款基于 [valaxy](https:/</p>
+]]></content>
+        <author>
+            <name>VALAXY Developer</name>
+            <email>i@valaxy.site</email>
+            <uri>https://valaxy.site</uri>
+        </author>
+        <published>2024-02-26T07:03:27.718Z</published>
+    </entry>
+</feed>

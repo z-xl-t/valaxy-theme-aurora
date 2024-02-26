@@ -1,0 +1,27 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Aurora 主题",
+    "home_page_url": "https://aurora.zmxlt.top/",
+    "feed_url": "https://aurora.zmxlt.top/feed.json",
+    "description": "Aurora 主题的描述",
+    "icon": "https://valaxy.site/valaxy-logo.png",
+    "author": {
+        "name": "VALAXY Developer",
+        "url": "https://valaxy.site"
+    },
+    "items": [
+        {
+            "id": "",
+            "content_html": "<h2>写在前面</h2>\n<p><a href=\"https://github.com/zmxlt/valaxy-theme-aurora\">valaxy-theme-aurora</a> 是一款基于 [valaxy](https:/</p>\n",
+            "url": "https://aurora.zmxlt.top/posts/20230430-valaxy-theme-aurora-tutorial/index",
+            "title": "valaxy-theme-aurora使用指南",
+            "summary": "这是 valaxy-theme-aurora 主题的使用指南",
+            "date_modified": "2023-05-02T00:00:00.000Z",
+            "date_published": "2024-02-26T07:03:27.718Z",
+            "author": {
+                "name": "VALAXY Developer",
+                "url": "https://valaxy.site"
+            }
+        }
+    ]
+}

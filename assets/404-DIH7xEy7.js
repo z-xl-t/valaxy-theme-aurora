@@ -1,0 +1,1 @@
+import{_ as n}from"./Layout.vue_vue_type_script_setup_true_lang-DtQ0cLj8.js";import{_ as c,o as e,c as s,w as _,l as o}from"./app-Bn_kGdL9.js";const a={},r=o("div",{class:"not-found"},[o("h1",null," ~❀~ 没有找到此页面内容，去别处逛逛 ~❀~ ")],-1);function f(i,l){const t=n;return e(),s(t,null,{"main-content":_(()=>[r]),_:1})}const u=c(a,[["render",f]]);export{u as default};
